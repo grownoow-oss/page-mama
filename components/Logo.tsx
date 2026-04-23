@@ -15,23 +15,11 @@ export default function Logo({ className = '', size = 'md' }: LogoProps) {
   const currentSize = sizeClasses[size];
 
   return (
-    <div className={`flex items-baseline ${className}`} style={{ fontFamily: 'system-ui, sans-serif' }}>
-      <span 
-        className={`font-black ${currentSize} tracking-tighter text-white drop-shadow-sm`} 
-        style={{ 
-          WebkitTextStroke: '3px #4A0E1B', 
-          paintOrder: 'stroke fill',
-        }}
-      >
+    <div className={`flex items-baseline ${className}`} style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+      <span className={`font-black ${currentSize} tracking-tight text-[#6366F1]`}>
         পেজ
       </span>
-      <span 
-        className={`font-black ${currentSize} tracking-tighter text-[#FFC107] drop-shadow-sm`} 
-        style={{ 
-          WebkitTextStroke: '3px #4A0E1B', 
-          paintOrder: 'stroke fill',
-        }}
-      >
+      <span className={`font-black ${currentSize} tracking-tight text-[#FF5E00]`}>
         মামা
       </span>
     </div>

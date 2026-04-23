@@ -6,15 +6,15 @@ export default function Hero() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-[100dvh] flex items-center pt-32 pb-20 overflow-hidden bg-[#FFFAF5]">
-      {/* Background Effects */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#FFCE0B]/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#FFCE0B]/5 rounded-full blur-[100px] translate-x-1/4 translate-y-1/4" />
+    <div className="relative min-h-[100dvh] flex items-center pt-32 pb-20 overflow-hidden bg-gradient-to-b from-[#FFF9F5] to-[#FFF1E6]">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF5E00] rounded-full blur-[120px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#FF5E00_1.5px,_transparent_1.5px)] [background-size:48px_48px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
           {/* Left Content */}
           <div className="lg:col-span-7 pt-10 lg:pt-0 text-center lg:text-left">
@@ -22,38 +22,36 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-x-2 bg-white border border-emerald-100 px-4 py-1.5 rounded-full mb-8 shadow-sm"
+              className="inline-flex items-center gap-x-2.5 bg-white/60 backdrop-blur-md border border-orange-100 px-4 py-2 rounded-full mb-8 shadow-sm"
             >
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_#10B981]" />
-              <span className="text-[11px] font-bold text-emerald-600 tracking-wide uppercase">২০২৬-এর #1 পেজ হেলথ টুল</span>
+              <div className="w-2 h-2 bg-[#FF5E00] rounded-full animate-pulse shadow-[0_0_8px_#FF5E00]" />
+              <span className="text-[11px] font-bold text-[#FF5E00] tracking-widest uppercase">২০২৬-এর #1 পেজ হেলথ টুল</span>
             </motion.div>
             
-            <div className="relative inline-block text-center lg:text-left mb-6">
-              <motion.h1 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-[48px] sm:text-[68px] lg:text-[84px] leading-[1.02] font-black tracking-[-2px] text-[#0F172A]"
-              >
-                আপনার পেজের<br />
-                <span className="text-[#FFCE0B] relative">
-                  রিচ কেন কমছে?
-                  <Sparkles className="absolute -right-8 -top-2 text-[#FFCE0B] w-8 h-8 animate-pulse" />
-                </span>
-              </motion.h1>
-            </div>
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-[44px] sm:text-[64px] lg:text-[86px] leading-[1.02] font-black tracking-[-3px] mb-6 text-[#0F172A]"
+            >
+              আপনার পেজের<br />
+              <span className="text-[#FF5E00] relative inline-block">
+                রিচ কেন কমছে?
+                <Sparkles className="absolute -right-10 -top-2 text-[#FF5E00] w-10 h-10 animate-pulse hidden lg:block" />
+              </span>
+            </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="mb-10 space-y-3"
+              className="mb-10"
             >
-              <h2 className="text-[20px] sm:text-[24px] font-bold text-[#334155] leading-tight">
-                Meta Business Suite যা বলে না, <span className="text-[#FFCE0B]">Page Mama</span> তা বলে — এবং সমাধান দেয়
+              <h2 className="text-[20px] sm:text-[26px] font-bold text-[#334155] leading-tight mb-4">
+                Meta Business Suite যা বলে না, <span className="text-[#FF5E00]">Page Mama</span> তা বলে — এবং সমাধান দেয়
               </h2>
-              <p className="text-[17px] sm:text-[20px] text-gray-500 font-medium">
-                ৩০ সেকেন্ডে জানুন + ঠিক কী করবেন — <span className="text-[#0F172A] font-bold">স্পষ্ট অ্যাকশন প্ল্যান</span> সহ।
+              <p className="text-[18px] sm:text-[22px] text-gray-500 font-medium">
+                ৩০ সেকেন্ডে জানুন + ঠিক কী করবেন — <span className="text-[#0F172A] font-bold">স্পষ্ট অ্যাকশন প্ল্যান</span> সহ
               </p>
             </motion.div>
             
@@ -62,67 +60,63 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="flex flex-col sm:flex-row gap-4 max-w-[620px] mx-auto lg:mx-0"
+              className="grid sm:grid-cols-2 gap-5 max-w-[620px] mx-auto lg:mx-0 mt-12"
             >
               {/* Safe Upload */}
               <button 
                 onClick={() => window.dispatchEvent(new Event('open-safe-upload'))}
-                className="flex-1 bg-white border-2 border-[#FFCE0B] shadow-[0_8px_30px_rgba(255,206,11,0.12)] rounded-[32px] p-6 text-left transition-all hover:shadow-[0_12px_40px_rgba(255,206,11,0.18)] hover:-translate-y-1"
+                className="group relative bg-white border border-orange-100 hover:border-[#FF5E00] shadow-[0_10px_30px_rgba(255,94,0,0.06)] hover:shadow-[0_20px_40px_rgba(255,94,0,0.12)] rounded-[32px] p-7 transition-all duration-500 text-left overflow-hidden"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#FFCE0B] text-white rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-[#FFCE0B]/20">
-                    <ShieldCheck className="w-6 h-6" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-full -mr-12 -mt-12 group-hover:bg-orange-100 transition-colors duration-500" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-orange-50 text-[#FF5E00] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-sm">
+                    <ShieldCheck className="w-7 h-7" />
                   </div>
-                  <div>
-                    <div className="font-black text-xl text-[#0F172A]">সবচেয়ে নিরাপদ</div>
-                    <div className="text-emerald-500 text-[10px] font-black tracking-widest uppercase mb-2">100% প্রাইভেসি</div>
-                    <div className="text-[13px] text-gray-500 font-medium leading-snug">স্ক্রিনশট বা PDF আপলোড করুন</div>
-                  </div>
+                  <div className="font-black text-[22px] text-[#0F172A] mb-1">সবচেয়ে নিরাপদ</div>
+                  <div className="text-[#FF5E00] text-[11px] font-black tracking-widest uppercase mb-3">100% প্রাইভেসি</div>
+                  <div className="text-[15px] text-gray-500 leading-snug font-medium">স্ক্রিনশট / PDF আপলোড করুন</div>
                 </div>
               </button>
               
               {/* Quick Check */}
               <button 
                 onClick={() => window.dispatchEvent(new Event('open-quick-check'))}
-                className="flex-1 bg-white border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-[32px] p-6 text-left transition-all hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1"
+                className="group relative bg-[#0F172A] border border-[#0F172A] hover:bg-black shadow-[0_10px_30px_rgba(0,0,0,0.1)] rounded-[32px] p-7 transition-all duration-500 text-left overflow-hidden"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#1A1A1A] text-white rounded-2xl flex items-center justify-center shrink-0">
-                    <Link2 className="w-6 h-6" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-white/10 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                    <Link2 className="w-7 h-7" />
                   </div>
-                  <div>
-                    <div className="font-black text-xl text-[#0F172A]">দ্রুত চেক</div>
-                    <div className="text-emerald-500 text-[10px] font-black tracking-widest uppercase mb-2">মাত্র ২৫ সেকেন্ডে</div>
-                    <div className="text-[13px] text-gray-500 font-medium leading-snug">পাবলিক লিংক দিয়ে</div>
-                  </div>
+                  <div className="font-black text-[22px] text-white mb-1">দ্রুত চেক</div>
+                  <div className="text-orange-400 text-[11px] font-black tracking-widest uppercase mb-3">মাত্র ২৫ সেকেন্ডে</div>
+                  <div className="text-[15px] text-gray-400 leading-snug font-medium">পাবলিক লিংক দিয়ে চেক করুন</div>
                 </div>
               </button>
             </motion.div>
 
-            {/* Bottom Buttons */}
+            {/* Watch Demo Button */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
-              className="flex flex-wrap items-center gap-6 mt-10 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row items-center gap-5 mt-12 justify-center lg:justify-start"
             >
               <button 
                 onClick={() => setIsVideoModalOpen(true)}
-                className="flex items-center gap-x-4 px-6 py-3.5 bg-white border border-gray-100 rounded-3xl text-sm font-bold transition-all shadow-sm hover:shadow-md group"
+                className="flex items-center gap-x-5 px-8 py-4 bg-white hover:bg-orange-50 border border-orange-100 rounded-full text-sm font-bold transition-all shadow-sm hover:shadow-md group"
               >
-                <div className="w-9 h-9 bg-[#FFCE0B] text-white rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
-                  <Play className="w-4 h-4 ml-0.5 fill-current" />
+                <div className="w-10 h-10 bg-[#FF5E00] text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Play className="w-4 h-4 ml-1 fill-current" />
                 </div>
                 <div className="text-left">
-                  <div className="text-[#0F172A] font-black">Watch Demo Video</div>
-                  <div className="text-[11px] text-gray-400 font-bold">৪৭ সেকেন্ড</div>
+                  <div className="text-[#0F172A] font-black text-[16px]">Watch Demo Video</div>
+                  <div className="text-[12px] text-gray-400 font-bold -mt-1">৪৭ সেকেন্ড</div>
                 </div>
               </button>
-              <div className="text-[13px] text-gray-400 font-bold">দেখুন কীভাবে কাজ করে</div>
             </motion.div>
           </div>
           
-          {/* Right Visual */}
+          {/* Right Visual: Analysis Card */}
           <div className="lg:col-span-5 relative mt-12 lg:mt-0">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
@@ -130,85 +124,76 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              {/* Analysis Card */}
-              <div className="bg-white rounded-[40px] p-2 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-white">
-                <div className="bg-[#0F172A] rounded-[34px] p-8 sm:p-10 text-white relative overflow-hidden min-h-[500px] flex flex-col justify-between">
+              {/* Premium Dark Card */}
+              <div className="bg-white rounded-[48px] p-2.5 shadow-[0_32px_80px_-20px_rgba(255,94,0,0.15)] border border-white relative z-10 overflow-hidden">
+                <div className="bg-[#0F172A] rounded-[40px] p-10 sm:p-12 text-white relative overflow-hidden min-h-[580px] flex flex-col justify-between">
                   
-                  {/* Subtle Glow */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFCE0B]/10 rounded-full blur-[80px] pointer-events-none -mr-32 -mt-32" />
+                  {/* Decorative Glow */}
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF5E00]/15 rounded-full blur-[90px] pointer-events-none -mr-40 -mt-40" />
 
-                  <div>
-                    <div className="flex items-center justify-between mb-12">
-                      <div className="flex items-center gap-2.5">
-                        <div className="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold rounded-full flex items-center gap-1.5 border border-emerald-500/10">
-                          <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                          LIVE
-                        </div>
-                        <span className="text-xs font-bold text-gray-400">আজকের অ্যানালাইসিস</span>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-16">
+                      <div className="px-4 py-1.5 bg-white/5 backdrop-blur-xl rounded-full flex items-center gap-2.5 border border-white/10">
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_8px_#34D399]" />
+                        <span className="text-[11px] font-black tracking-widest uppercase text-gray-300">Live Analysis</span>
                       </div>
                       <div className="text-right">
-                        <div className="text-[10px] text-gray-500 font-bold tracking-widest uppercase mb-1">Today's Rank</div>
-                        <div className="text-3xl font-black flex items-center justify-end gap-1">
-                          #142 <span className="text-emerald-400 text-xl">↑</span>
+                        <div className="text-[11px] text-gray-500 font-black tracking-widest uppercase mb-1">Today's Rank</div>
+                        <div className="text-4xl font-black flex items-center justify-end gap-1.5">
+                          #142 <span className="text-emerald-400 text-2xl font-bold">↑</span>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="mb-12">
-                      <div className="text-[90px] sm:text-[110px] font-black leading-none tracking-tighter text-white mb-2">৮৭</div>
-                      <div className="flex items-center gap-3">
-                        <div className="text-sm font-bold text-gray-400 tracking-wide">স্বাস্থ্য স্কোর</div>
-                        <div className="text-emerald-400 text-sm font-bold flex items-center gap-1">
-                          +12 <TrendingUp className="w-4 h-4" />
+                    <div className="mb-16">
+                      <div className="text-[100px] sm:text-[120px] font-black leading-none tracking-tighter text-white mb-3">৮৭</div>
+                      <div className="flex items-center gap-4">
+                        <div className="text-[16px] font-bold text-gray-400">স্বাস্থ্য স্কোর</div>
+                        <div className="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-black rounded-lg border border-emerald-500/10">
+                          +12 <TrendingUp className="inline w-3.5 h-3.5 ml-1" />
                         </div>
                       </div>
                     </div>
 
-                    <div className="space-y-8">
+                    <div className="space-y-10">
                       <div>
-                        <div className="flex justify-between items-center text-[11px] font-bold mb-3 tracking-wide">
-                          <span className="text-gray-400 uppercase">রিচ পটেনশিয়াল</span>
-                          <span className="text-emerald-400 font-mono">+34%</span>
+                        <div className="flex justify-between items-center text-xs font-black mb-4 tracking-widest">
+                          <span className="text-gray-500 uppercase">Reach Potential</span>
+                          <span className="text-[#FF5E00]">+34%</span>
                         </div>
                         <div className="h-2 bg-white/5 rounded-full overflow-hidden">
                           <motion.div 
                             initial={{ width: 0 }}
                             animate={{ width: '68%' }}
                             transition={{ duration: 1.5, delay: 1 }}
-                            className="h-full bg-[#FFCE0B]"
+                            className="h-full bg-gradient-to-r from-[#FF5E00] to-orange-400"
                           />
                         </div>
                       </div>
 
                       <div className="flex justify-between items-end">
                         <div>
-                          <div className="text-[10px] text-gray-500 font-bold tracking-widest uppercase mb-2">গ্রোথ (গত ৭ দিনে)</div>
-                          <div className="text-4xl font-black text-white">+১২.৮%</div>
+                          <div className="text-[11px] text-gray-500 font-black tracking-widest uppercase mb-3">Growth (last 7 days)</div>
+                          <div className="text-5xl font-black text-white">+১২.৮%</div>
                         </div>
-                        <div className="px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black rounded-lg tracking-wider">
-                          GROWTH
+                        <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center border border-white/5">
+                          <Activity className="w-8 h-8 text-orange-400" />
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <div className="relative z-10 pt-10 border-t border-white/5">
+                    <div className="text-sm text-gray-500 font-bold mb-1">আজকের অ্যানালাইসিস</div>
+                    <div className="text-white font-black text-lg flex items-center gap-2">
+                      <TrendingUp className="w-5 h-5 text-emerald-400" /> ১২,০০০+ পেজ অ্যানালাইজড
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Stat Card */}
-              <motion.div 
-                initial={{ x: 20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 1 }}
-                className="absolute -bottom-6 -right-6 bg-white p-5 rounded-3xl shadow-2xl border border-gray-50 flex items-center gap-4 z-20"
-              >
-                <div className="w-12 h-12 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center">
-                  <Activity className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="text-[#0F172A] font-black text-lg">১,২৪৭ <span className="text-sm font-bold text-gray-400">পেজ</span></div>
-                  <div className="text-[11px] text-gray-400 font-bold">আজ অ্যানালাইজড</div>
-                </div>
-              </motion.div>
+              {/* Decorative Glow Backdrop */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#FF5E00]/5 rounded-full blur-[100px] -z-10" />
             </motion.div>
           </div>
 
@@ -222,7 +207,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/90 z-[200] flex items-center justify-center p-4 backdrop-blur-md"
+            className="fixed inset-0 bg-[#0F172A]/95 z-[200] flex items-center justify-center p-4 backdrop-blur-md"
             onClick={() => setIsVideoModalOpen(false)}
           >
             <motion.div 
@@ -230,28 +215,40 @@ export default function Hero() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-[40px] w-full max-w-4xl overflow-hidden shadow-2xl"
+              className="bg-white rounded-[48px] w-full max-w-4xl overflow-hidden shadow-2xl"
             >
-              <div className="flex items-center justify-between px-8 py-6 border-b border-gray-50">
+              <div className="flex items-center justify-between px-10 py-8 border-b border-gray-50">
                 <div>
-                  <h3 className="font-bold text-xl text-[#0F172A]">Page Mama কীভাবে কাজ করে?</h3>
-                  <p className="text-sm text-gray-500 mt-1">৪৭ সেকেন্ডের ভিডিওতে সব বুঝে নিন</p>
+                  <h3 className="font-black text-2xl text-[#0F172A]">Page Mama কীভাবে কাজ করে?</h3>
+                  <p className="text-sm text-gray-500 mt-1">৪৭ সেকেন্ডের এই ভিডিওটি আপনার পেজের মোড় ঘুরিয়ে দিতে পারে</p>
                 </div>
-                <button onClick={() => setIsVideoModalOpen(false)} className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-50 text-gray-400 hover:text-gray-900 transition-colors">
-                  <X className="w-5 h-5" />
+                <button 
+                  onClick={() => setIsVideoModalOpen(false)} 
+                  className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-50 text-gray-400 hover:text-[#0F172A] transition-colors"
+                >
+                  <X className="w-6 h-6" />
                 </button>
               </div>
+              
               <div className="aspect-video bg-[#0F172A] relative flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-[#FFCE0B] rounded-full flex items-center justify-center mx-auto mb-4 shadow-2xl shadow-[#FFCE0B]/20">
-                    <Play className="w-8 h-8 ml-1 fill-white text-white" />
+                  <div className="w-24 h-24 bg-[#FF5E00] rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-[#FF5E00]/30">
+                    <Play className="w-10 h-10 ml-1.5 fill-white text-white" />
                   </div>
-                  <p className="text-white font-bold text-lg">Demo Video</p>
+                  <p className="text-white font-black text-xl">Demo Video</p>
+                  <p className="text-gray-500 text-sm mt-1">এখানে আপনার ভিডিও এম্বেড হবে</p>
                 </div>
               </div>
-              <div className="px-8 py-6 bg-gray-50 flex items-center justify-between">
-                <div className="text-sm text-gray-500 font-bold">৪৭ সেকেন্ড • বাংলায়</div>
-                <button onClick={() => setIsVideoModalOpen(false)} className="bg-[#FFCE0B] text-white px-8 py-3.5 rounded-2xl font-black text-sm hover:shadow-lg transition-all active:scale-95">
+              
+              <div className="px-10 py-8 bg-gray-50 flex items-center justify-between">
+                <div className="flex items-center gap-6">
+                  <div className="px-4 py-1.5 bg-white border border-gray-100 rounded-xl text-[11px] font-black text-gray-600 uppercase tracking-widest">বাংলায়</div>
+                  <div className="text-sm text-gray-500 font-bold">৪৭ সেকেন্ড</div>
+                </div>
+                <button 
+                  onClick={() => setIsVideoModalOpen(false)}
+                  className="bg-[#FF5E00] text-white px-10 py-4 rounded-2xl font-black text-sm hover:shadow-xl hover:-translate-y-0.5 transition-all"
+                >
                   বুঝেছি, শুরু করি
                 </button>
               </div>
