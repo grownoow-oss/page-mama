@@ -2,9 +2,12 @@ providers = ["node"]
 
 [variables]
 NODE_VERSION = "20"
+PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+NEXT_TELEMETRY_DISABLED = "1"
+NODE_ENV = "production"
 
 [phases.install]
-cmds = ["npm install --legacy-peer-deps"]
+cmds = ["npm install"]
 
 [phases.build]
 cmds = ["npm run build"]

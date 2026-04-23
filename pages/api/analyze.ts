@@ -1,23 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-
-
+import { LRUCache } from 'lru-cache'
+import { z } from 'zod'
 
 // ── Rate limiting ──────────────────────────────────────────────────────────
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
-const RATE_LIMIT = 5
-const RATE_WINDOW = 60 * 1000
+const rateLimit = new LRUCache<string, number>({
+  max: 500,
+  ttl: 60 * 1000, // 1 minute
+})
 
-function checkRateLimit(identifier: string): boolean {
-  const now = Date.now()
-  const record = rateLimitMap.get(identifier)
-  if (!record || now > record.resetTime) {
-    rateLimitMap.set(identifier, { count: 1, resetTime: now + RATE_WINDOW })
-    return true
-  }
-  if (record.count >= RATE_LIMIT) return false
-  record.count++
+function checkRateLimit(ip: string, limit = 5): boolean {
+  const tokenCount = rateLimit.get(ip) || 0
+  if (tokenCount >= limit) return false
+  rateLimit.set(ip, tokenCount + 1)
   return true
 }
+
+// ── Validation Schema ──────────────────────────────────────────────────────
+const analyzeSchema = z.object({
+  url: z.string().url().max(500),
+  plan: z.string().max(50).optional(),
+  userId: z.string().max(100).optional(),
+})
 
 // ── Mock Analysis Engine (until N8n webhook is configured) ─────────────────
 function generateMockAnalysis(url: string, plan: string) {
@@ -82,17 +85,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(429).json({ error: 'অনেকবার চেষ্টা হয়েছে। কিছুক্ষণ পরে আবার চেষ্টা করুন।' })
   }
 
-  const { url, plan, userId } = req.body
-
-  if (!url || typeof url !== 'string' || url.length > 500) {
-    return res.status(400).json({ error: 'Invalid URL provided' })
+  const parsed = analyzeSchema.safeParse(req.body)
+  if (!parsed.success) {
+    return res.status(400).json({ error: 'Invalid input data', details: parsed.error.format() })
   }
-
-  try {
-    new URL(url) // validate URL format
-  } catch {
-    return res.status(400).json({ error: 'Invalid URL format' })
-  }
+  const { url, plan, userId } = parsed.data
 
   // Try real N8n webhook first, fallback to mock
   const N8N_WEBHOOK_URL = process.env.N8N_WEBHOOK_URL

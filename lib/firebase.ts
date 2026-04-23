@@ -13,10 +13,20 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-const auth = getAuth(app);
-const db = getFirestore(app);
+// Initialize Firebase safely
+let app;
+let auth: any;
+let db: any;
+
+if (typeof window !== "undefined" || process.env.NEXT_PUBLIC_FIREBASE_API_KEY) {
+  try {
+    app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+    auth = getAuth(app);
+    db = getFirestore(app);
+  } catch (error) {
+    console.error("Firebase initialization error:", error);
+  }
+}
 
 // Initialize Analytics (client-side only)
 let analytics;

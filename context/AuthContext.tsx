@@ -37,14 +37,15 @@ interface AuthContextType {
 // ── Context ────────────────────────────────────────────────────────────────
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const googleProvider = new GoogleAuthProvider();
-
 // ── Provider ───────────────────────────────────────────────────────────────
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+
+  // Initialize provider only when needed
+  const getGoogleProvider = () => new GoogleAuthProvider();
 
   // Fetch or create user profile in Firestore
   const fetchOrCreateProfile = async (firebaseUser: User) => {
@@ -69,6 +70,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   // Listen to Firebase auth state changes
   useEffect(() => {
+    if (!auth) {
+      setLoading(false);
+      return;
+    }
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       setUser(firebaseUser);
       if (firebaseUser) {
@@ -111,7 +116,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const loginWithGoogle = async () => {
-    const result = await signInWithPopup(auth, googleProvider);
+    const provider = getGoogleProvider();
+    const result = await signInWithPopup(auth, provider);
     await fetchOrCreateProfile(result.user);
   };
 

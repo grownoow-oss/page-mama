@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import jwt from 'jsonwebtoken'
-
-const JWT_SECRET = process.env.JWT_SECRET || 'CHANGE_THIS_IN_PRODUCTION'
+import { adminAuth } from './firebaseAdmin'
 
 export interface AuthenticatedRequest extends NextApiRequest {
-    userId?: string
-    userEmail?: string
+    user?: {
+        uid: string;
+        email?: string;
+    }
 }
 
 export function verifyAuth(
@@ -13,34 +13,30 @@ export function verifyAuth(
 ) {
     return async (req: AuthenticatedRequest, res: NextApiResponse) => {
         try {
-            // Get token from HttpOnly cookie
-            const token = req.cookies.auth_token
+            const authHeader = req.headers.authorization
+            if (!authHeader || !authHeader.startsWith('Bearer ')) {
+                return res.status(401).json({ error: 'Unauthorized: No token provided' })
+            }
 
+            const token = authHeader.split('Bearer ')[1]
             if (!token) {
-                return res.status(401).json({ error: 'Unauthorized' })
+                return res.status(401).json({ error: 'Unauthorized: Invalid token format' })
             }
 
-            // Verify JWT token
-            const decoded = jwt.verify(token, JWT_SECRET) as {
-                userId: string
-                email: string
-            }
+            // Verify Firebase ID token
+            const decodedToken = await adminAuth.verifyIdToken(token)
 
             // Attach user data to request
-            req.userId = decoded.userId
-            req.userEmail = decoded.email
+            req.user = {
+                uid: decodedToken.uid,
+                email: decodedToken.email,
+            }
 
             // Call the actual handler
             return handler(req, res)
         } catch (error) {
+            console.error('Auth Error:', error)
             return res.status(401).json({ error: 'Invalid or expired token' })
         }
     }
 }
-
-// Example usage in API route:
-// export default verifyAuth(async (req, res) => {
-//   // req.userId is now available and verified
-//   const userId = req.userId
-//   // ... your code
-// })

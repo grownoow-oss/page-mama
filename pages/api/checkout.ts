@@ -1,18 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { LRUCache } from 'lru-cache'
+import { z } from 'zod'
 
 // ── Rate Limiter ───────────────────────────────────────────────────────────
-const rateMap = new Map<string, { count: number; reset: number }>()
-function checkRate(key: string, limit = 3, windowMs = 60_000): boolean {
-  const now = Date.now()
-  const r = rateMap.get(key)
-  if (!r || now > r.reset) {
-    rateMap.set(key, { count: 1, reset: now + windowMs })
-    return true
-  }
-  if (r.count >= limit) return false
-  r.count++
+const rateLimit = new LRUCache<string, number>({
+  max: 500,
+  ttl: 60 * 1000, // 1 minute
+})
+
+function checkRate(ip: string, limit = 5): boolean {
+  const tokenCount = rateLimit.get(ip) || 0
+  if (tokenCount >= limit) return false
+  rateLimit.set(ip, tokenCount + 1)
   return true
 }
+
+// ── Validation Schema ──────────────────────────────────────────────────────
+const checkoutSchema = z.object({
+  plan: z.string().min(1).max(50),
+  email: z.string().email().max(100),
+  phone: z.string().max(20).optional(),
+  pageLink: z.string().url().max(500).optional().or(z.literal('')),
+  userId: z.string().max(100).optional(),
+  paymentMethod: z.enum(['bkash', 'nagad', 'card']),
+})
 
 const planMap: Record<string, string> = {
   'কুইক চেক': 'Quick Check',
@@ -47,12 +58,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(429).json({ error: 'অনেকবার চেষ্টা হয়েছে। কিছুক্ষণ পরে আবার চেষ্টা করুন।' })
   }
 
-  const { plan, email, phone, pageLink, userId, paymentMethod } = req.body
-
-  // Validate required fields
-  if (!plan || !email || !paymentMethod) {
-    return res.status(400).json({ error: 'Required fields missing: plan, email, paymentMethod' })
+  // Validate Input
+  const parsed = checkoutSchema.safeParse(req.body)
+  if (!parsed.success) {
+    return res.status(400).json({ error: 'Invalid input data', details: parsed.error.format() })
   }
+  const { plan, email, phone, pageLink, userId, paymentMethod } = parsed.data
 
   // Normalize plan name
   const canonicalPlan = planMap[plan] || plan
