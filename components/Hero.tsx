@@ -1,217 +1,203 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, Link2, TrendingUp, Activity, Sparkles, Play, X } from 'lucide-react';
+import { ShieldCheck, Link2, TrendingUp, Activity, Sparkles, Play, X, ChevronRight } from 'lucide-react';
 
 export default function Hero() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-[100dvh] flex items-center pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#FAFAFA] via-white to-[#FFF7ED]">
+    <div className="relative min-h-[100dvh] flex items-center pt-32 pb-20 overflow-hidden bg-gradient-to-b from-[#FFF9F5] to-[#FFF1E6]">
       {/* Background Effects */}
-      <div className="absolute top-[-10%] left-[-10%] w-[60%] md:w-[40%] h-[40%] rounded-full bg-[#FFCE0B]/5 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[60%] md:w-[40%] h-[40%] rounded-full bg-[#FF9D00]/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.03]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF5E00] rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_#FF5E00_1px,_transparent_1px)] [background-size:40px_40px]" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
           {/* Left Content */}
-          <div className="lg:col-span-7 pt-10 lg:pt-0 text-center sm:text-left">
+          <div className="lg:col-span-7 pt-10 lg:pt-0 text-center lg:text-left">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-x-2 bg-[#F8FAFC] sm:bg-white border border-gray-200 px-4 sm:px-5 py-1.5 sm:py-2 rounded-3xl mb-6 sm:mb-8 shadow-sm mx-auto sm:mx-0"
+              className="inline-flex items-center gap-x-2.5 bg-white/50 backdrop-blur-sm border border-orange-100 px-4 py-2 rounded-full mb-8 shadow-sm"
             >
-              <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
-              <span className="text-[11px] sm:text-xs font-bold text-emerald-600 tracking-wider sm:tracking-normal">২০২৬-এর #1 পেজ হেলথ টুল</span>
+              <div className="w-2 h-2 bg-[#FF5E00] rounded-full animate-pulse shadow-[0_0_8px_#FF5E00]" />
+              <span className="text-xs font-bold text-[#FF5E00] tracking-wide uppercase">২০২৬-এর সেরা পেজ অ্যানালাইসিস টুল</span>
             </motion.div>
             
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-[38px] sm:text-[58px] lg:text-[76px] leading-[1.08] sm:leading-[1.02] font-extrabold tracking-[-1.5px] sm:tracking-[-4px] mb-4 sm:mb-6 text-[#0F172A] px-1 sm:px-0"
+              className="text-[42px] sm:text-[64px] lg:text-[82px] leading-[1.05] font-extrabold tracking-[-2px] mb-6 text-[#1A1A1A]"
             >
               আপনার পেজের<br />
-              <span className="relative inline-block mt-2">
-                <span className="bg-gradient-to-r from-[#FFCE0B] via-orange-500 to-[#FF8A3D] sm:to-yellow-500 bg-clip-text text-transparent">রিচ কেন কমছে?</span>
-                <Sparkles className="absolute -right-6 sm:-right-10 -top-2 sm:-top-4 text-[#FF9D00] w-6 h-6 sm:w-8 sm:h-8 animate-pulse" />
-              </span>
+              <span className="text-[#FF5E00]">রিচ কেন কমছে?</span>
             </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-[300px] sm:max-w-[520px] mx-auto sm:mx-0 text-[16px] sm:text-[21px] text-gray-600 leading-snug mb-9 sm:mb-10"
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="mb-6"
             >
-              ৩০ সেকেন্ডে জানুন + ঠিক কী করবেন —<br className="hidden sm:block" />
-              <span className="font-semibold text-gray-800">স্পষ্ট অ্যাকশন প্ল্যান</span> সহ।
-            </motion.p>
+              <h2 className="text-[20px] sm:text-[24px] font-bold text-[#334155] leading-tight mb-3">
+                Meta Business Suite যা বলে না, <span className="text-[#FF5E00]">Page Mama</span> তা বলে — এবং সমাধান দেয়
+              </h2>
+              <p className="text-[17px] sm:text-[20px] text-gray-500 font-medium">
+                ৩০ সেকেন্ডে জানুন + ঠিক কী করবেন — <span className="text-gray-900 font-bold">স্পষ্ট অ্যাকশন প্ল্যান</span> সহ
+              </p>
+            </motion.div>
             
             {/* Action Cards */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="grid sm:grid-cols-2 gap-4 sm:gap-5 max-w-[340px] sm:max-w-[540px] mx-auto sm:mx-0"
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="grid sm:grid-cols-2 gap-4 max-w-[580px] mx-auto lg:mx-0 mt-10"
             >
               {/* Safe Upload */}
-              <div 
+              <button 
                 onClick={() => window.dispatchEvent(new Event('open-safe-upload'))}
-                className="group cursor-pointer bg-white border border-gray-200 sm:border-2 sm:border-[#FFCE0B] shadow-sm hover:shadow-md sm:hover:shadow-2xl rounded-3xl p-5 sm:p-6 transition-all duration-300 active:scale-[0.985] hover:-translate-y-1 text-left"
+                className="group relative bg-white border border-orange-100 hover:border-[#FF5E00] shadow-[0_4px_20px_rgba(255,94,0,0.05)] hover:shadow-[0_10px_30px_rgba(255,94,0,0.12)] rounded-3xl p-6 transition-all duration-500 text-left overflow-hidden"
               >
-                <div className="flex gap-x-4 items-start">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#FFCE0B] to-yellow-500 text-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-none sm:shadow-lg sm:shadow-yellow-500/20 group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-full -mr-12 -mt-12 group-hover:bg-orange-100 transition-colors duration-500" />
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-orange-50 text-[#FF5E00] rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
                     <ShieldCheck className="w-6 h-6" />
                   </div>
-                  <div className="flex-1 pt-1 sm:pt-0">
-                    <div className="font-extrabold text-[20px] sm:text-xl text-[#0F172A]">সবচেয়ে নিরাপদ</div>
-                    <div className="text-emerald-600 text-[11px] font-bold tracking-wide uppercase mt-0.5">100% প্রাইভেসি</div>
-                    <div className="mt-3 sm:mt-2.5 text-[14.5px] sm:text-sm text-gray-600 leading-tight sm:leading-normal font-medium">স্ক্রিনশট বা PDF আপলোড করুন</div>
-                  </div>
+                  <div className="font-extrabold text-[20px] text-[#1A1A1A] mb-1">সবচেয়ে নিরাপদ</div>
+                  <div className="text-[#FF5E00] text-[11px] font-bold tracking-wider uppercase mb-3">100% প্রাইভেসি</div>
+                  <div className="text-[14px] text-gray-500 leading-snug font-medium">স্ক্রিনশট বা PDF আপলোড করুন</div>
                 </div>
-              </div>
+              </button>
               
               {/* Quick Check */}
-              <div 
+              <button 
                 onClick={() => window.dispatchEvent(new Event('open-quick-check'))}
-                className="group cursor-pointer bg-white border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md sm:hover:shadow-xl rounded-3xl p-5 sm:p-6 transition-all duration-300 active:scale-[0.985] hover:-translate-y-1 text-left"
+                className="group relative bg-[#1A1A1A] border border-[#1A1A1A] hover:bg-black shadow-[0_4px_20px_rgba(0,0,0,0.1)] rounded-3xl p-6 transition-all duration-500 text-left overflow-hidden"
               >
-                <div className="flex gap-x-4 items-start">
-                  <div className="w-12 h-12 bg-gray-900 text-white rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-black transition-all duration-300">
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-white/10 text-white rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
                     <Link2 className="w-6 h-6" />
                   </div>
-                  <div className="flex-1 pt-1 sm:pt-0">
-                    <div className="font-extrabold text-[20px] sm:text-xl text-[#0F172A]">দ্রুত চেক</div>
-                    <div className="text-emerald-600 text-[11px] font-bold tracking-wide uppercase mt-0.5">মাত্র ২৫ সেকেন্ডে</div>
-                    <div className="mt-3 sm:mt-2.5 text-[14.5px] sm:text-sm text-gray-600 leading-tight sm:leading-normal font-medium">পাবলিক লিংক দিয়ে</div>
-                  </div>
+                  <div className="font-extrabold text-[20px] text-white mb-1">দ্রুত চেক</div>
+                  <div className="text-orange-400 text-[11px] font-bold tracking-wider uppercase mb-3">মাত্র ২৫ সেকেন্ডে</div>
+                  <div className="text-[14px] text-gray-400 leading-snug font-medium">পাবলিক লিংক দিয়ে চেক করুন</div>
                 </div>
-              </div>
+              </button>
             </motion.div>
 
             {/* Demo Video Button */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mt-6 sm:mt-8 max-w-[320px] sm:max-w-none mx-auto sm:mx-0"
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="flex flex-col sm:flex-row items-center gap-4 mt-10 justify-center lg:justify-start"
             >
               <button 
                 onClick={() => setIsVideoModalOpen(true)}
-                className="flex items-center justify-center sm:justify-start gap-x-3 px-6 py-[17px] sm:py-3.5 bg-white border border-gray-200 sm:border-gray-300 hover:border-gray-400 rounded-3xl sm:rounded-2xl text-sm font-semibold transition-all shadow-sm hover:shadow-md active:scale-[0.985] w-full sm:w-auto group"
+                className="flex items-center gap-x-4 px-6 py-3 bg-white hover:bg-orange-50 border border-orange-100 rounded-full text-sm font-bold transition-all shadow-sm hover:shadow-md group"
               >
-                <div className="w-9 h-9 bg-[#FFCE0B] group-hover:bg-yellow-600 text-[#0F172A] rounded-2xl sm:rounded-xl flex items-center justify-center transition-colors">
-                  <Play className="w-4 h-4 ml-0.5 fill-current" />
+                <div className="w-8 h-8 bg-[#FF5E00] text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Play className="w-3.5 h-3.5 ml-0.5 fill-current" />
                 </div>
                 <div className="text-left">
-                  <div className="font-bold text-[#0F172A] text-[15px] sm:text-sm">Watch Demo Video</div>
-                  <div className="text-xs text-gray-500 font-medium -mt-0.5 sm:mt-0">৪৭ সেকেন্ড <span className="sm:hidden">• বাংলায়</span></div>
+                  <div className="text-[#1A1A1A]">Watch Demo Video</div>
+                  <div className="text-[11px] text-gray-400 font-medium -mt-0.5">৪৭ সেকেন্ড</div>
                 </div>
               </button>
-              
-              <div className="hidden sm:block text-[13px] sm:text-xs text-gray-500 font-medium text-center sm:text-left">
-                দেখুন কীভাবে কাজ করে
-              </div>
             </motion.div>
           </div>
           
-          {/* Right Visual */}
+          {/* Right Visual: Live Analysis Card */}
           <div className="lg:col-span-5 relative mt-12 lg:mt-0">
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9, rotateX: 10 }}
-              animate={{ opacity: 1, scale: 1, rotateX: 0, y: [-8, 8, -8] }}
-              transition={{ 
-                opacity: { duration: 0.8, delay: 0.4 },
-                scale: { duration: 0.8, delay: 0.4, type: "spring" },
-                rotateX: { duration: 0.8, delay: 0.4, type: "spring" },
-                y: { duration: 5, repeat: Infinity, ease: "easeInOut" } 
-              }}
-              style={{ perspective: 1000 }}
-              className="relative z-10"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="relative"
             >
-              {/* Main Floating Card */}
-              <div className="relative bg-white rounded-[2rem] p-2 shadow-2xl shadow-yellow-900/5 border border-gray-100">
-                <div className="bg-[#0F172A] rounded-[1.5rem] p-6 sm:p-8 text-white relative overflow-hidden">
+              {/* Premium Card Layout */}
+              <div className="bg-white rounded-[40px] p-2 shadow-[0_32px_64px_-16px_rgba(255,94,0,0.12)] border border-white relative z-10 overflow-hidden">
+                <div className="bg-[#1A1A1A] rounded-[34px] p-8 sm:p-10 text-white relative overflow-hidden h-[540px] flex flex-col justify-between">
                   
-                  {/* Subtle dark gradient background */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFCE0B]/10 rounded-full blur-[60px] pointer-events-none"></div>
+                  {/* Decorative Gradient */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF5E00]/20 rounded-full blur-[80px] pointer-events-none -mr-32 -mt-32" />
 
-                  {/* Live Header */}
-                  <div className="flex items-center justify-between mb-8 relative z-10">
-                    <div className="flex items-center gap-x-3">
-                      <div className="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-2xl flex items-center gap-x-1.5 border border-emerald-500/10">
-                        <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.6)]"></div>
-                        LIVE
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-12">
+                      <div className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full flex items-center gap-2 border border-white/10">
+                        <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                        <span className="text-[10px] font-bold tracking-widest uppercase text-gray-300">Live Analysis</span>
                       </div>
-                      <span className="text-sm text-gray-400 font-medium">আজকের অ্যানালাইসিস</span>
-                    </div>
-                    
-                    <div className="text-right">
-                      <div className="text-[10px] text-gray-400 font-bold tracking-widest uppercase mb-1">Today's Rank</div>
-                      <div className="text-3xl sm:text-4xl font-extrabold flex items-center gap-x-1.5">
-                        #142 <span className="text-emerald-400 text-xl sm:text-2xl">↑</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Health Score */}
-                  <div className="flex items-end gap-x-4 mb-10 relative z-10">
-                    <div>
-                      <div className="text-7xl sm:text-[84px] font-extrabold leading-none tracking-tighter">৮৭</div>
-                      <div className="text-sm text-gray-400 font-medium mt-1">স্বাস্থ্য স্কোর</div>
-                    </div>
-                    <div className="text-emerald-400 text-base sm:text-lg pb-2 font-bold flex items-center">
-                      +12 <TrendingUp className="w-4 h-4 ml-1" />
-                    </div>
-                  </div>
-                  
-                  {/* Metrics */}
-                  <div className="space-y-6 relative z-10">
-                    <div>
-                      <div className="flex justify-between text-xs mb-2.5 font-medium">
-                        <span className="text-gray-400">রিচ পটেনশিয়াল</span>
-                        <span className="font-mono font-bold text-emerald-400">+34%</span>
-                      </div>
-                      <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                        <motion.div 
-                          initial={{ width: 0 }}
-                          animate={{ width: '68%' }}
-                          transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
-                          className="h-full bg-gradient-to-r from-[#FFCE0B] to-yellow-400"
-                        >
-                        </motion.div>
+                      <div className="text-right">
+                        <div className="text-[10px] text-gray-500 font-bold tracking-widest uppercase mb-1">Today's Rank</div>
+                        <div className="text-3xl font-extrabold flex items-center justify-end gap-1">
+                          #142 <span className="text-emerald-400 text-xl">↑</span>
+                        </div>
                       </div>
                     </div>
                     
-                    <div className="flex justify-between items-center pt-2">
+                    <div className="mb-12">
+                      <div className="text-[84px] sm:text-[100px] font-black leading-none tracking-tighter text-white mb-2">৮৭</div>
+                      <div className="flex items-center gap-3">
+                        <div className="text-sm font-bold text-gray-400">স্বাস্থ্য স্কোর</div>
+                        <div className="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-lg border border-emerald-500/10">
+                          +12 <TrendingUp className="inline w-3 h-3 ml-0.5" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-8">
                       <div>
-                        <div className="text-xs text-gray-400 font-medium mb-1">গ্রোথ (গত ৭ দিনে)</div>
-                        <div className="text-2xl sm:text-3xl font-extrabold">+১২.৮%</div>
+                        <div className="flex justify-between items-center text-xs font-bold mb-3">
+                          <span className="text-gray-500 uppercase tracking-wider">Reach Potential</span>
+                          <span className="text-[#FF5E00]">+34%</span>
+                        </div>
+                        <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                          <motion.div 
+                            initial={{ width: 0 }}
+                            animate={{ width: '68%' }}
+                            transition={{ duration: 1.5, delay: 1 }}
+                            className="h-full bg-gradient-to-r from-[#FF5E00] to-orange-400"
+                          />
+                        </div>
                       </div>
-                      <div className="px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold rounded-2xl tracking-wide">
-                        GROWTH
+
+                      <div className="flex justify-between items-end">
+                        <div>
+                          <div className="text-[10px] text-gray-500 font-bold tracking-widest uppercase mb-2">Growth (last 7 days)</div>
+                          <div className="text-4xl font-black text-white">+১২.৮%</div>
+                        </div>
+                        <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center border border-white/5">
+                          <Activity className="w-6 h-6 text-orange-400" />
+                        </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <div className="relative z-10 pt-8 border-t border-white/5">
+                    <div className="flex -space-x-3 mb-4">
+                      {[1,2,3,4].map(i => (
+                        <div key={i} className="w-8 h-8 rounded-full border-2 border-[#1A1A1A] bg-gray-800" />
+                      ))}
+                      <div className="w-8 h-8 rounded-full border-2 border-[#1A1A1A] bg-orange-500 flex items-center justify-center text-[10px] font-bold">
+                        +12k
+                      </div>
+                    </div>
+                    <div className="text-[12px] text-gray-500 font-bold">
+                      <span className="text-white">১২,০০০+</span> পেজ অ্যাডমিন আমাদের ব্যবহার করছেন
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Decorative Elements */}
-              <motion.div 
-                animate={{ y: [-6, 6, -6] }} 
-                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute -bottom-4 -right-4 bg-white p-4 sm:p-5 rounded-2xl shadow-xl shadow-black/10 border border-gray-100 z-20 flex items-center gap-3"
-              >
-                <div className="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center">
-                  <TrendingUp className="text-emerald-500 w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-[#0F172A] font-extrabold text-base">১,২৪৭ <span className="text-sm font-bold text-gray-600">পেজ</span></div>
-                  <div className="text-[11px] text-gray-500 font-medium">আজ অ্যানালাইজড</div>
-                </div>
-              </motion.div>
+              {/* Decorative Background Glow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#FF5E00]/5 rounded-full blur-[100px] -z-10" />
             </motion.div>
           </div>
 
@@ -225,7 +211,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 z-[200] flex items-center justify-center p-4 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/90 z-[200] flex items-center justify-center p-4 backdrop-blur-md"
             onClick={() => setIsVideoModalOpen(false)}
           >
             <motion.div 
@@ -233,50 +219,41 @@ export default function Hero() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-3xl w-full max-w-4xl overflow-hidden shadow-2xl"
+              className="bg-white rounded-[40px] w-full max-w-4xl overflow-hidden shadow-2xl"
             >
-              {/* Modal Header */}
-              <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-gray-100">
+              <div className="flex items-center justify-between px-8 py-6 border-b border-gray-50">
                 <div>
-                  <div className="font-bold text-xl text-[#0F172A]">Page Mama Demo Video</div>
-                  <div className="text-sm text-gray-500 mt-0.5">কীভাবে ৩০ সেকেন্ডে আপনার পেজের স্বাস্থ্য জানবেন</div>
+                  <h3 className="font-bold text-xl text-[#1A1A1A]">Page Mama কীভাবে কাজ করে?</h3>
+                  <p className="text-sm text-gray-500 mt-1">৪৭ সেকেন্ডের এই ভিডিওটি আপনার পেজের মোড় ঘুরিয়ে দিতে পারে</p>
                 </div>
                 <button 
                   onClick={() => setIsVideoModalOpen(false)} 
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-50 text-gray-400 hover:text-gray-900 transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
               
-              {/* Video Container */}
-              <div className="aspect-video bg-black flex items-center justify-center relative group">
-                <div className="text-center text-white relative z-10 group-hover:scale-105 transition-transform duration-300">
-                  <div className="mx-auto w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mb-4 border border-white/20">
-                    <Play className="w-8 h-8 ml-1 fill-white" />
+              <div className="aspect-video bg-gray-900 relative flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-[#FF5E00] rounded-full flex items-center justify-center mx-auto mb-4 shadow-2xl shadow-[#FF5E00]/20">
+                    <Play className="w-8 h-8 ml-1 fill-white text-white" />
                   </div>
-                  <div className="text-lg font-bold">Demo Video</div>
-                  <div className="text-sm text-gray-400 mt-1">(এখানে আপনার ভিডিও এম্বেড হবে)</div>
+                  <p className="text-white font-bold text-lg">Demo Video</p>
+                  <p className="text-gray-500 text-sm mt-1">এখানে আপনার ভিডিও এম্বেড হবে</p>
                 </div>
-                
-                {/* Real Video Embed Example */}
-                {/* 
-                <iframe 
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                  frameBorder="0" 
-                  allowFullScreen
-                ></iframe>
-                */}
               </div>
               
-              <div className="px-6 sm:px-8 py-5 bg-gray-50 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="text-sm text-gray-600 font-medium">৪৭ সেকেন্ড • বাংলায়</div>
+              <div className="px-8 py-6 bg-gray-50 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="px-3 py-1 bg-white border border-gray-100 rounded-lg text-xs font-bold text-gray-600">বাংলায়</div>
+                  <div className="text-sm text-gray-500 font-medium">৪৭ সেকেন্ড</div>
+                </div>
                 <button 
                   onClick={() => setIsVideoModalOpen(false)}
-                  className="text-[#FFCE0B] font-bold text-sm hover:underline"
+                  className="bg-[#FF5E00] text-white px-8 py-3 rounded-2xl font-bold text-sm hover:shadow-lg transition-all"
                 >
-                  পরে দেখব
+                  বুঝেছি, অ্যানালাইসিস শুরু করি
                 </button>
               </div>
             </motion.div>
