@@ -22,9 +22,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-x-2 bg-white border border-emerald-100 px-4 py-1.5 rounded-full mb-8 shadow-sm"
+              className="inline-flex items-center gap-x-2 bg-emerald-50 border border-emerald-100 px-4 py-1 rounded-full mb-6"
             >
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_#10B981]" />
+              <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
               <span className="text-[11px] font-bold text-emerald-600 tracking-wide uppercase">২০২৬-এর #1 পেজ হেলথ টুল</span>
             </motion.div>
             
