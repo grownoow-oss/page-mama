@@ -1,7 +1,7 @@
-import { initializeApp, getApps, getApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getAnalytics, isSupported } from "firebase/analytics";
+import { initializeApp, getApps, getApp, FirebaseApp } from "firebase/app";
+import { getAuth, Auth } from "firebase/auth";
+import { getFirestore, Firestore } from "firebase/firestore";
+import { getAnalytics, isSupported, Analytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -14,7 +14,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase safely
-let app;
+let app: any;
 let auth: any;
 let db: any;
 
@@ -29,10 +29,10 @@ if (typeof window !== "undefined" || process.env.NEXT_PUBLIC_FIREBASE_API_KEY) {
 }
 
 // Initialize Analytics (client-side only)
-let analytics;
+let analytics: any;
 if (typeof window !== "undefined") {
   isSupported().then((supported) => {
-    if (supported) {
+    if (supported && app) {
       analytics = getAnalytics(app);
     }
   });
