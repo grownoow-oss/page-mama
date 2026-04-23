@@ -1,0 +1,13 @@
+.next/
+*.log
+node_modules/
+.env
+.env.local
+.env.*.local
+.vercel
+.DS_Store
+*.pem
+dist/
+build/
+.firebase/
+out/
