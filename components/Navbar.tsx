@@ -48,7 +48,7 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-2 md:py-3' : 'py-3 md:py-5'}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className={`relative flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 rounded-2xl sm:rounded-3xl transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100' : 'bg-transparent'}`}>
+          <div className={`relative flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 rounded-2xl sm:rounded-3xl transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100' : 'bg-white/10 backdrop-blur-sm shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-white/20'}`}>
             
             {/* Logo */}
             <Link href="/" className="group relative z-10 hover:opacity-95 transition-opacity">
