@@ -11,3 +11,4 @@ dist/
 build/
 .firebase/
 out/
+tsconfig.tsbuildinfo
