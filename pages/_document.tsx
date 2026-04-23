@@ -17,8 +17,9 @@ export default function Document() {
           rel="stylesheet"
         />
         {/* Favicons */}
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href="/favicon.png?v=1" />
+        <link rel="shortcut icon" href="/favicon.ico?v=1" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1" />
 
         {/* FontAwesome for Icons */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
