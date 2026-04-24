@@ -149,7 +149,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                     <div>
                       <div className="font-extrabold text-xl text-gray-900">{plan.name}</div>
                       {plan.popular && (
-                        <div className="text-[#FFCE0B] text-xs font-bold mt-1 uppercase tracking-wide">Most Popular</div>
+                        <div className="text-[#FFB800] text-xs font-bold mt-1 uppercase tracking-wide">Most Popular</div>
                       )}
                     </div>
                     <div className="text-right">
@@ -182,7 +182,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="your@email.com"
-                      className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#FFCE0B] focus:ring-2 focus:ring-[#FFCE0B]/20 outline-none text-sm"
+                      className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#FFB800] focus:ring-2 focus:ring-[#FFB800]/20 outline-none text-sm"
                     />
                   </div>
                   <div>
@@ -193,7 +193,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="017XXXXXXXX"
-                      className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#FFCE0B] focus:ring-2 focus:ring-[#FFCE0B]/20 outline-none text-sm"
+                      className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#FFB800] focus:ring-2 focus:ring-[#FFB800]/20 outline-none text-sm"
                     />
                   </div>
                   <div>
@@ -206,7 +206,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                       value={formData.pageLink}
                       onChange={(e) => setFormData({ ...formData, pageLink: e.target.value })}
                       placeholder="https://facebook.com/yourpage"
-                      className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#FFCE0B] focus:ring-2 focus:ring-[#FFCE0B]/20 outline-none text-sm"
+                      className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#FFB800] focus:ring-2 focus:ring-[#FFB800]/20 outline-none text-sm"
                     />
                   </div>
                 </form>
@@ -218,7 +218,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
               <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
                 <button
                   onClick={() => setStep('info')}
-                  className="text-sm text-gray-400 hover:text-[#FFCE0B] mb-5 flex items-center gap-1 transition-colors font-medium"
+                  className="text-sm text-gray-400 hover:text-[#FFB800] mb-5 flex items-center gap-1 transition-colors font-medium"
                 >
                   ← পিছনে যান
                 </button>
@@ -241,7 +241,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                       key={method.id}
                       onClick={() => handlePayment(method.id)}
                       disabled={isLoading}
-                      className="w-full flex items-center justify-between p-4 rounded-2xl border border-gray-100 hover:border-[#FFCE0B] hover:shadow-sm transition-all group disabled:opacity-50 bg-white"
+                      className="w-full flex items-center justify-between p-4 rounded-2xl border border-gray-100 hover:border-[#FFB800] hover:shadow-sm transition-all group disabled:opacity-50 bg-white"
                     >
                       <div className="flex items-center gap-4">
                         <div className={`w-11 h-11 rounded-xl flex items-center justify-center font-extrabold text-base shadow-sm ${method.color}`}>
@@ -249,13 +249,13 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                         </div>
                         <span className="font-bold text-gray-900 text-sm">{method.name}</span>
                       </div>
-                      <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-[#FFCE0B] transition-colors" />
+                      <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-[#FFB800] transition-colors" />
                     </button>
                   ))}
 
                   {isLoading && (
                     <div className="absolute inset-0 bg-white/90 backdrop-blur-sm flex flex-col items-center justify-center z-10 rounded-2xl">
-                      <Loader2 className="w-8 h-8 text-[#FFCE0B] animate-spin mb-2" />
+                      <Loader2 className="w-8 h-8 text-[#FFB800] animate-spin mb-2" />
                       <p className="text-gray-800 font-bold text-sm">পেমেন্ট প্রসেস হচ্ছে...</p>
                     </div>
                   )}
@@ -284,7 +284,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                 )}
                 <button
                   onClick={handleGoToDashboard}
-                  className="w-full py-4 bg-[#FFCE0B] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-2xl transition-all shadow-lg shadow-[#FFCE0B]/25 active:scale-[0.985] flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-[#FFB800] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-2xl transition-all shadow-lg shadow-[#FFB800]/25 active:scale-[0.985] flex items-center justify-center gap-2"
                 >
                   Dashboard-এ যান <ArrowRight className="w-4 h-4" />
                 </button>
@@ -299,7 +299,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                 type="submit"
                 form="checkout-form"
                 disabled={isLoading}
-                className="w-full py-4 bg-[#FFCE0B] hover:bg-[#E5BA0A] text-[#0F172A] font-extrabold rounded-2xl text-base flex items-center justify-center gap-2 active:scale-[0.985] transition-all disabled:opacity-70 shadow-lg shadow-[#FFCE0B]/20"
+                className="w-full py-4 bg-[#FFB800] hover:bg-[#E5BA0A] text-[#0F172A] font-extrabold rounded-2xl text-base flex items-center justify-center gap-2 active:scale-[0.985] transition-all disabled:opacity-70 shadow-lg shadow-[#FFB800]/20"
               >
                 {isLoading ? (
                   <Loader2 className="w-5 h-5 animate-spin" />

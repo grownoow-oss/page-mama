@@ -4,7 +4,7 @@ export default function OverviewTab() {
   const insights = [
     { title: "Reach Drop-এর মূল কারণ", value: "Short Videos-এর অভাব", color: "text-red-600" },
     { title: "সবচেয়ে বড় শক্তি", value: "কমেন্ট এনগেজমেন্ট ৪.২%", color: "text-green-600" },
-    { title: "সবচেয়ে বড় সুযোগ", value: "Reels/TikTok বাড়ালে +৩৫% Reach", color: "text-[#FFCE0B]" },
+    { title: "সবচেয়ে বড় সুযোগ", value: "Reels/TikTok বাড়ালে +৩৫% Reach", color: "text-[#FFB800]" },
   ];
 
   return (
@@ -20,7 +20,7 @@ export default function OverviewTab() {
           আপনার পেজ ভালো কনটেন্ট তৈরি করছে, কিন্তু অ্যালগরিদমের সাথে তাল মিলিয়ে চলতে পারছে না। 
           বর্তমানে প্রতি সপ্তাহে মাত্র ৮টি পোস্ট করছেন। একই নিশে সফল পেজগুলো করছে ১৮–২২টি।
         </p>
-        <div className="mt-6 inline-flex items-center gap-2 px-4 py-1.5 bg-yellow-100 text-[#FFCE0B] rounded-full text-sm font-medium">
+        <div className="mt-6 inline-flex items-center gap-2 px-4 py-1.5 bg-yellow-100 text-[#FFB800] rounded-full text-sm font-medium">
           প্রধান সমস্যা: Reels/TikTok-এর অভাব + পোস্টিং অসামঞ্জস্যতা
         </div>
       </motion.div>

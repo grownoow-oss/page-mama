@@ -60,10 +60,10 @@ export default function Navbar() {
                 <Link 
                   key={idx} 
                   href={link.href} 
-                  className="text-sm font-semibold text-[#64748B] hover:text-[#FFCE0B] transition-colors relative group"
+                  className="text-sm font-semibold text-[#64748B] hover:text-[#FFB800] transition-colors relative group"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFCE0B] transition-all duration-300 group-hover:w-full rounded-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFB800] transition-all duration-300 group-hover:w-full rounded-full"></span>
                 </Link>
               ))}
             </div>
@@ -113,7 +113,7 @@ export default function Navbar() {
                     key={idx} 
                     href={link.href} 
                     onClick={() => setIsOpen(false)}
-                    className="block px-4 py-3.5 text-[#475569] font-bold hover:text-[#FFCE0B] hover:bg-yellow-50 rounded-xl transition-colors"
+                    className="block px-4 py-3.5 text-[#475569] font-bold hover:text-[#FFB800] hover:bg-yellow-50 rounded-xl transition-colors"
                   >
                     {link.name}
                   </Link>

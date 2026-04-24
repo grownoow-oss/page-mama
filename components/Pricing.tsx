@@ -15,7 +15,7 @@ export default function Pricing() {
     <div id="pricing" className="py-24 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-1.5 bg-[#FFCE0B]/10 text-[#FFCE0B] font-bold rounded-full text-xs tracking-wider uppercase mb-6">
+          <div className="inline-flex items-center px-4 py-1.5 bg-[#FFB800]/10 text-[#FFB800] font-bold rounded-full text-xs tracking-wider uppercase mb-6">
             Pricing Plans
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] tracking-tight mb-4">
@@ -79,8 +79,8 @@ export default function Pricing() {
 
           
           {/* Smart Growth (Popular) */}
-          <div className="relative bg-white rounded-3xl p-8 border-2 border-[#FFCE0B] shadow-xl shadow-[#FFCE0B]/5 scale-105 z-10">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FFCE0B] text-[#0F172A] text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider">
+          <div className="relative bg-white rounded-3xl p-8 border-2 border-[#FFB800] shadow-xl shadow-[#FFB800]/5 scale-105 z-10">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FFB800] text-[#0F172A] text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider">
               Most Popular
             </div>
             
@@ -130,7 +130,7 @@ export default function Pricing() {
                 features: ['স্প্যামি শব্দ + Reach বিশ্লেষণ', 'কনটেন্ট পারফরম্যান্স ইনসাইট', 'পোস্টিং স্ট্র্যাটেজি + টাইমিং', 'সাপ্তাহিক অ্যাকশন প্ল্যান'],
                 popular: true
               })}
-              className="w-full py-3.5 bg-[#FFCE0B] hover:bg-[#FF7324] text-[#0F172A] font-bold rounded-2xl transition-colors shadow-lg shadow-[#FFCE0B]/20"
+              className="w-full py-3.5 bg-[#FFB800] hover:bg-[#FF7324] text-[#0F172A] font-bold rounded-2xl transition-colors shadow-lg shadow-[#FFB800]/20"
             >
               স্মার্ট গ্রোথ শুরু করুন
             </button>

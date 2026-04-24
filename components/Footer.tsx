@@ -18,20 +18,20 @@ export default function Footer() {
           <div>
             <h4 className="text-[#0F172A] font-bold mb-4 sm:mb-6 uppercase tracking-wider text-xs sm:text-sm">কোম্পানি</h4>
             <ul className="space-y-3 sm:space-y-4 text-sm text-[#64748B] font-medium">
-              <li><Link href="/#how" className="hover:text-[#FFCE0B] transition-colors">কীভাবে কাজ করে</Link></li>
-              <li><Link href="/#benefits" className="hover:text-[#FFCE0B] transition-colors">কী পাবেন</Link></li>
-              <li><Link href="/#pricing" className="hover:text-[#FFCE0B] transition-colors">প্রাইসিং</Link></li>
-              <li><Link href="/demo" className="hover:text-[#FFCE0B] transition-colors">লাইভ ডেমো</Link></li>
+              <li><Link href="/#how" className="hover:text-[#FFB800] transition-colors">কীভাবে কাজ করে</Link></li>
+              <li><Link href="/#benefits" className="hover:text-[#FFB800] transition-colors">কী পাবেন</Link></li>
+              <li><Link href="/#pricing" className="hover:text-[#FFB800] transition-colors">প্রাইসিং</Link></li>
+              <li><Link href="/demo" className="hover:text-[#FFB800] transition-colors">লাইভ ডেমো</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-[#0F172A] font-bold mb-4 sm:mb-6 uppercase tracking-wider text-xs sm:text-sm">সাপোর্ট</h4>
             <ul className="space-y-3 sm:space-y-4 text-sm text-[#64748B] font-medium">
-              <li><Link href="/#faq" className="hover:text-[#FFCE0B] transition-colors">প্রায়শই জিজ্ঞাসিত প্রশ্ন</Link></li>
-              <li><a href="#" className="hover:text-[#FFCE0B] transition-colors">প্রাইভেসি পলিসি</a></li>
-              <li><a href="#" className="hover:text-[#FFCE0B] transition-colors">টার্মস অফ সার্ভিস</a></li>
-              <li><a href="#" className="hover:text-[#FFCE0B] transition-colors">যোগাযোগ করুন</a></li>
+              <li><Link href="/#faq" className="hover:text-[#FFB800] transition-colors">প্রায়শই জিজ্ঞাসিত প্রশ্ন</Link></li>
+              <li><a href="#" className="hover:text-[#FFB800] transition-colors">প্রাইভেসি পলিসি</a></li>
+              <li><a href="#" className="hover:text-[#FFB800] transition-colors">টার্মস অফ সার্ভিস</a></li>
+              <li><a href="#" className="hover:text-[#FFB800] transition-colors">যোগাযোগ করুন</a></li>
             </ul>
           </div>
         </div>
@@ -42,13 +42,13 @@ export default function Footer() {
           </div>
           
           <div className="flex items-center gap-3 sm:gap-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-[#FFCE0B] hover:border-[#FFCE0B] hover:text-[#0F172A] text-[#64748B] transition-all duration-300 shadow-sm">
+            <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-[#FFB800] hover:border-[#FFB800] hover:text-[#0F172A] text-[#64748B] transition-all duration-300 shadow-sm">
               <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-[#FFCE0B] hover:border-[#FFCE0B] hover:text-[#0F172A] text-[#64748B] transition-all duration-300 shadow-sm">
+            <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-[#FFB800] hover:border-[#FFB800] hover:text-[#0F172A] text-[#64748B] transition-all duration-300 shadow-sm">
               <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-[#FFCE0B] hover:border-[#FFCE0B] hover:text-[#0F172A] text-[#64748B] transition-all duration-300 shadow-sm">
+            <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-[#FFB800] hover:border-[#FFB800] hover:text-[#0F172A] text-[#64748B] transition-all duration-300 shadow-sm">
               <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
           </div>

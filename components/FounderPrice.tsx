@@ -1,13 +1,13 @@
 export default function FounderPrice() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-20 text-center">
-      <div className="inline-flex items-center gap-2 px-5 py-1.5 bg-yellow-50 text-[#FFCE0B] rounded-full text-sm font-semibold mb-8">
+      <div className="inline-flex items-center gap-2 px-5 py-1.5 bg-yellow-50 text-[#FFB800] rounded-full text-sm font-semibold mb-8">
         আমরা এখন BETA-তে আছি
       </div>
 
       <h2 className="text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6">
         প্রথম ১০০ জন পাচ্ছেন<br />
-        <span className="text-[#FFCE0B]">Founder Price</span>
+        <span className="text-[#FFB800]">Founder Price</span>
       </h2>
 
       <p className="max-w-2xl mx-auto text-2xl text-gray-600 mb-10">
@@ -23,7 +23,7 @@ export default function FounderPrice() {
         <div className="mt-6 text-sm text-gray-500">— Page Mama টিম</div>
       </div>
 
-      <button className="px-16 py-5 bg-[#FFCE0B] hover:bg-[#E5BA0A] text-[#0F172A] font-semibold text-xl rounded-2xl shadow-xl">
+      <button className="px-16 py-5 bg-[#FFB800] hover:bg-[#E5BA0A] text-[#0F172A] font-semibold text-xl rounded-2xl shadow-xl">
         Founder Price-এ যোগ দিন
       </button>
 

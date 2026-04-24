@@ -9,8 +9,8 @@ export default function Hero() {
     <div className="relative min-h-[100dvh] flex items-center pt-32 pb-20 overflow-hidden bg-[#FFFAF5]">
       {/* Background Effects */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#FFCE0B]/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#FFCE0B]/5 rounded-full blur-[100px] translate-x-1/4 translate-y-1/4" />
+        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#FFB800]/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#FFB800]/5 rounded-full blur-[100px] translate-x-1/4 translate-y-1/4" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
@@ -22,10 +22,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-x-2 bg-emerald-50 border border-emerald-100 px-4 py-1 rounded-full mb-6"
+              className="flex w-fit mx-auto lg:mx-0 items-center gap-x-2 bg-emerald-50 border border-emerald-100 px-4 py-1.5 rounded-full mb-6 shadow-sm"
             >
               <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-              <span className="text-[11px] font-bold text-emerald-600 tracking-wide uppercase">২০২৬-এর #1 পেজ হেলথ টুল</span>
+              <span className="text-[12px] font-bold text-emerald-600">২০২৬-এর #1 পেজ হেলথ টুল</span>
             </motion.div>
             
             <div className="relative inline-block text-center lg:text-left mb-6">
@@ -36,9 +36,9 @@ export default function Hero() {
                 className="text-[48px] sm:text-[68px] lg:text-[84px] leading-[1.02] font-black tracking-[-2px] text-[#0F172A]"
               >
                 আপনার পেজের<br />
-                <span className="text-[#FFCE0B] relative">
+                <span className="text-[#FFB800] relative">
                   রিচ কেন কমছে?
-                  <Sparkles className="absolute -right-8 -top-2 text-[#FFCE0B] w-8 h-8 animate-pulse" />
+                  <Sparkles className="absolute -right-8 -top-2 text-[#FFB800] w-8 h-8 animate-pulse" />
                 </span>
               </motion.h1>
             </div>
@@ -50,7 +50,7 @@ export default function Hero() {
               className="mb-10 space-y-3"
             >
               <h2 className="text-[20px] sm:text-[24px] font-bold text-[#334155] leading-tight">
-                Meta Business Suite যা বলে না, <span className="text-[#FFCE0B]">Page Mama</span> তা বলে — এবং সমাধান দেয়
+                Meta Business Suite যা বলে না, <span className="text-[#FFB800]">Page Mama</span> তা বলে — এবং সমাধান দেয়
               </h2>
               <p className="text-[17px] sm:text-[20px] text-gray-500 font-medium">
                 ৩০ সেকেন্ডে জানুন + ঠিক কী করবেন — <span className="text-[#0F172A] font-bold">স্পষ্ট অ্যাকশন প্ল্যান</span> সহ।
@@ -67,10 +67,10 @@ export default function Hero() {
               {/* Safe Upload */}
               <button 
                 onClick={() => window.dispatchEvent(new Event('open-safe-upload'))}
-                className="flex-1 bg-white border-2 border-[#FFCE0B] shadow-[0_8px_30px_rgba(255,206,11,0.12)] rounded-[32px] p-6 text-left transition-all hover:shadow-[0_12px_40px_rgba(255,206,11,0.18)] hover:-translate-y-1"
+                className="flex-1 bg-white border-2 border-[#FFB800] shadow-[0_8px_30px_rgba(255,206,11,0.12)] rounded-[32px] p-6 text-left transition-all hover:shadow-[0_12px_40px_rgba(255,206,11,0.18)] hover:-translate-y-1"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#FFCE0B] text-white rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-[#FFCE0B]/20">
+                  <div className="w-12 h-12 bg-[#FFB800] text-white rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-[#FFB800]/20">
                     <ShieldCheck className="w-6 h-6" />
                   </div>
                   <div>
@@ -110,7 +110,7 @@ export default function Hero() {
                 onClick={() => setIsVideoModalOpen(true)}
                 className="flex items-center gap-x-4 px-6 py-3.5 bg-white border border-gray-100 rounded-3xl text-sm font-bold transition-all shadow-sm hover:shadow-md group"
               >
-                <div className="w-9 h-9 bg-[#FFCE0B] text-white rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
+                <div className="w-9 h-9 bg-[#FFB800] text-white rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
                   <Play className="w-4 h-4 ml-0.5 fill-current" />
                 </div>
                 <div className="text-left">
@@ -135,7 +135,7 @@ export default function Hero() {
                 <div className="bg-[#0F172A] rounded-[34px] p-8 sm:p-10 text-white relative overflow-hidden min-h-[500px] flex flex-col justify-between">
                   
                   {/* Subtle Glow */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFCE0B]/10 rounded-full blur-[80px] pointer-events-none -mr-32 -mt-32" />
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFB800]/10 rounded-full blur-[80px] pointer-events-none -mr-32 -mt-32" />
 
                   <div>
                     <div className="flex items-center justify-between mb-12">
@@ -175,7 +175,7 @@ export default function Hero() {
                             initial={{ width: 0 }}
                             animate={{ width: '68%' }}
                             transition={{ duration: 1.5, delay: 1 }}
-                            className="h-full bg-[#FFCE0B]"
+                            className="h-full bg-[#FFB800]"
                           />
                         </div>
                       </div>
@@ -243,7 +243,7 @@ export default function Hero() {
               </div>
               <div className="aspect-video bg-[#0F172A] relative flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-[#FFCE0B] rounded-full flex items-center justify-center mx-auto mb-4 shadow-2xl shadow-[#FFCE0B]/20">
+                  <div className="w-20 h-20 bg-[#FFB800] rounded-full flex items-center justify-center mx-auto mb-4 shadow-2xl shadow-[#FFB800]/20">
                     <Play className="w-8 h-8 ml-1 fill-white text-white" />
                   </div>
                   <p className="text-white font-bold text-lg">Demo Video</p>
@@ -251,7 +251,7 @@ export default function Hero() {
               </div>
               <div className="px-8 py-6 bg-gray-50 flex items-center justify-between">
                 <div className="text-sm text-gray-500 font-bold">৪৭ সেকেন্ড • বাংলায়</div>
-                <button onClick={() => setIsVideoModalOpen(false)} className="bg-[#FFCE0B] text-white px-8 py-3.5 rounded-2xl font-black text-sm hover:shadow-lg transition-all active:scale-95">
+                <button onClick={() => setIsVideoModalOpen(false)} className="bg-[#FFB800] text-white px-8 py-3.5 rounded-2xl font-black text-sm hover:shadow-lg transition-all active:scale-95">
                   বুঝেছি, শুরু করি
                 </button>
               </div>

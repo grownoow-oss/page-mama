@@ -38,18 +38,18 @@ export default function SocialProof() {
         <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
           {reviews.map((review, idx) => (
             <div key={idx} className="bg-[#FAFAFA] p-8 rounded-3xl border border-gray-100 hover:-translate-y-1 transition-all duration-300 relative group">
-              <Quote className="absolute top-6 right-8 w-12 h-12 text-black/[0.03] group-hover:text-[#FFCE0B]/10 transition-colors duration-500" />
+              <Quote className="absolute top-6 right-8 w-12 h-12 text-black/[0.03] group-hover:text-[#FFB800]/10 transition-colors duration-500" />
               
               <div className="flex items-center gap-4 mb-6 sm:mb-8">
                 <div className="relative">
                   <img src={review.img} className="w-14 h-14 rounded-full border-2 border-white shadow-sm" alt={review.name} />
-                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-[#FFCE0B] rounded-full border-2 border-white flex items-center justify-center">
+                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-[#FFB800] rounded-full border-2 border-white flex items-center justify-center">
                     <CheckCircle2 className="w-3 h-3 text-white" />
                   </div>
                 </div>
                 <div>
                   <div className="font-extrabold text-[#0F172A] text-lg">{review.name}</div>
-                  <div className="text-[10px] font-bold text-[#FFCE0B] tracking-widest uppercase">{review.role}</div>
+                  <div className="text-[10px] font-bold text-[#FFB800] tracking-widest uppercase">{review.role}</div>
                 </div>
               </div>
               <p className="text-[#475569] leading-relaxed text-base sm:text-lg font-medium italic">"{review.text}"</p>

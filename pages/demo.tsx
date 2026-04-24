@@ -71,15 +71,15 @@ export default function DemoReport() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
             <div className="flex items-center gap-x-3 sm:gap-x-4">
               <Link href="/" className="flex items-center gap-x-2 sm:gap-x-3">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FFCE0B] rounded-xl flex items-center justify-center shadow-sm">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FFB800] rounded-xl flex items-center justify-center shadow-sm">
                   <Shield className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="hidden xs:block">
                   <span className="font-extrabold text-xl sm:text-2xl tracking-tighter">Page</span>
-                  <span className="font-extrabold text-xl sm:text-2xl tracking-tighter text-[#FFCE0B]">Mama</span>
+                  <span className="font-extrabold text-xl sm:text-2xl tracking-tighter text-[#FFB800]">Mama</span>
                 </div>
               </Link>
-              <div className="bg-yellow-50 text-[#FFCE0B] text-[10px] sm:text-xs font-bold px-2 py-1 rounded-lg tracking-wider">DEMO</div>
+              <div className="bg-yellow-50 text-[#FFB800] text-[10px] sm:text-xs font-bold px-2 py-1 rounded-lg tracking-wider">DEMO</div>
             </div>
             
             <div className="flex items-center gap-x-2 sm:gap-x-4">
@@ -95,7 +95,7 @@ export default function DemoReport() {
               <button 
                 onClick={handleDownload}
                 disabled={isRegenerating || isDownloading}
-                className="flex items-center gap-x-2 px-4 sm:px-6 py-2.5 bg-[#FFCE0B] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-xl sm:rounded-2xl text-xs sm:text-sm transition-all disabled:opacity-50 shadow-md shadow-yellow-500/20"
+                className="flex items-center gap-x-2 px-4 sm:px-6 py-2.5 bg-[#FFB800] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-xl sm:rounded-2xl text-xs sm:text-sm transition-all disabled:opacity-50 shadow-md shadow-yellow-500/20"
               >
                 <Download className={`w-4 h-4 ${isDownloading ? 'animate-pulse' : ''}`} />
                 <span>{isDownloading ? 'Generating...' : 'Download PDF'}</span>
@@ -126,9 +126,9 @@ export default function DemoReport() {
               <div className="text-center">
                 <div className="text-[10px] text-[#64748B] font-bold tracking-[0.2em] mb-2">HEALTH SCORE</div>
                 <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-[6px] border-yellow-50 flex items-center justify-center relative">
-                  <div className="absolute inset-0 rounded-full border-[6px] border-[#FFCE0B] border-t-transparent -rotate-45"></div>
+                  <div className="absolute inset-0 rounded-full border-[6px] border-[#FFB800] border-t-transparent -rotate-45"></div>
                   <div className="text-center">
-                    <div className="text-4xl sm:text-5xl font-extrabold text-[#FFCE0B]">87</div>
+                    <div className="text-4xl sm:text-5xl font-extrabold text-[#FFB800]">87</div>
                     <div className="text-[10px] text-[#64748B] font-bold">/ 100</div>
                   </div>
                 </div>
@@ -244,14 +244,14 @@ export default function DemoReport() {
               
               {/* Projected Improvement */}
               <div className="bg-[#0F172A] rounded-[2rem] p-8 sm:p-10 text-white relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFCE0B]/20 blur-3xl -translate-y-16 translate-x-16 group-hover:bg-[#FFCE0B]/30 transition-colors"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFB800]/20 blur-3xl -translate-y-16 translate-x-16 group-hover:bg-[#FFB800]/30 transition-colors"></div>
                 <div className="relative z-10">
-                  <div className="text-xs sm:text-sm font-bold text-yellow-400 mb-6 uppercase tracking-[0.2em]">প্রজেক্টেড রেজাল্ট (৭ দিনে)</div>
+                  <div className="text-xs sm:text-sm font-bold text-amber-500 mb-6 uppercase tracking-[0.2em]">প্রজেক্টেড রেজাল্ট (৭ দিনে)</div>
                   <div className="text-5xl sm:text-6xl font-extrabold tracking-tighter mb-2">+2,140</div>
                   <div className="text-lg sm:text-xl font-bold text-gray-400">অতিরিক্ত রিচ</div>
                   
                   <div className="mt-10 p-4 bg-white/5 rounded-2xl border border-white/10 flex items-start gap-3">
-                    <Info className="w-5 h-5 text-yellow-400 shrink-0 mt-0.5" />
+                    <Info className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                     <p className="text-xs sm:text-sm text-gray-400 font-medium leading-relaxed">
                       যদি আপনি আমাদের দেওয়া সাজেশনগুলো সঠিকভাবে ফলো করেন, তবে এই বৃদ্ধি নিশ্চিত।
                     </p>
@@ -275,10 +275,10 @@ export default function DemoReport() {
                   <div 
                     key={action.id}
                     onClick={() => toggleAction(action.id)}
-                    className={`flex gap-4 sm:gap-6 p-6 sm:p-8 border-2 rounded-3xl cursor-pointer transition-all duration-300 ${action.completed ? 'border-gray-100 bg-gray-50' : 'border-gray-100 hover:border-[#FFCE0B]/30 hover:shadow-xl hover:shadow-black/5'}`}
+                    className={`flex gap-4 sm:gap-6 p-6 sm:p-8 border-2 rounded-3xl cursor-pointer transition-all duration-300 ${action.completed ? 'border-gray-100 bg-gray-50' : 'border-gray-100 hover:border-[#FFB800]/30 hover:shadow-xl hover:shadow-black/5'}`}
                   >
                     <div className="shrink-0">
-                      <div className={`w-7 h-7 rounded-full border-2 flex items-center justify-center transition-all ${action.completed ? 'bg-[#FFCE0B] border-[#FFCE0B] scale-110' : 'border-[#CBD5E1]'}`}>
+                      <div className={`w-7 h-7 rounded-full border-2 flex items-center justify-center transition-all ${action.completed ? 'bg-[#FFB800] border-[#FFB800] scale-110' : 'border-[#CBD5E1]'}`}>
                         {action.completed && <Check className="w-4 h-4 text-white" strokeWidth={4} />}
                       </div>
                     </div>
@@ -295,12 +295,12 @@ export default function DemoReport() {
           {/* Final CTA */}
           <div className="mt-20 text-center pb-12">
             <div className="inline-block bg-white border border-gray-100 p-8 sm:p-12 rounded-[3rem] shadow-2xl shadow-yellow-500/5 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-2 bg-[#FFCE0B]"></div>
+              <div className="absolute top-0 left-0 w-full h-2 bg-[#FFB800]"></div>
               <div className="font-bold text-[#94A3B8] mb-6 tracking-widest text-xs sm:text-sm uppercase">এটি শুধু একটি ডেমো রিপোর্ট</div>
               <h4 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] mb-8 leading-tight">আপনার পেজের জন্য আসল<br className="sm:hidden" /> রিপোর্ট চান?</h4>
               <button 
                 onClick={() => router.push('/')}
-                className="w-full sm:w-auto px-10 sm:px-16 py-4 sm:py-5 bg-[#FFCE0B] hover:bg-[#D4A809] text-[#0F172A] font-extrabold rounded-2xl text-lg sm:text-xl transition-all shadow-xl shadow-yellow-500/20 active:scale-95 flex items-center justify-center gap-3"
+                className="w-full sm:w-auto px-10 sm:px-16 py-4 sm:py-5 bg-[#FFB800] hover:bg-[#D4A809] text-[#0F172A] font-extrabold rounded-2xl text-lg sm:text-xl transition-all shadow-xl shadow-yellow-500/20 active:scale-95 flex items-center justify-center gap-3"
               >
                 <span>আসল রিপোর্ট নিন</span>
                 <ArrowUpRight className="w-6 h-6" />

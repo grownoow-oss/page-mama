@@ -15,7 +15,7 @@ export default function PremiumTrustBar() {
       number: 27, 
       suffix: "%", 
       label: "গড় রিচ বৃদ্ধি",
-      color: "text-[#FFCE0B]"
+      color: "text-[#FFB800]"
     },
     { 
       number: 4.8, 
@@ -46,7 +46,7 @@ export default function PremiumTrustBar() {
                 <span className={`text-5xl font-semibold tracking-tighter ${stat.color}`}>
                   <AnimatedCounter end={stat.number} />
                 </span>
-                <span className="text-4xl font-medium text-[#FFCE0B] group-hover:text-[#E5BA0A] transition-colors">
+                <span className="text-4xl font-medium text-[#FFB800] group-hover:text-[#E5BA0A] transition-colors">
                   {stat.suffix}
                 </span>
               </div>

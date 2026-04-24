@@ -79,10 +79,10 @@
     @apply bg-black/40 backdrop-blur-xl border border-white/10;
   }
   .orange-gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FFCE0B] to-[#FF9D00];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FFB800] to-[#FF9D00];
   }
   .orange-gradient-bg {
-    @apply bg-gradient-to-r from-[#FFCE0B] to-[#FF9D00];
+    @apply bg-gradient-to-r from-[#FFB800] to-[#FF9D00];
   }
 }
 
@@ -117,7 +117,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #FFCE0B, transparent);
+  background: linear-gradient(90deg, transparent, #FFB800, transparent);
   opacity: 0.5;
 }
 
@@ -126,7 +126,7 @@
   width: 160px;
   height: 160px;
   border-radius: 9999px;
-  background: conic-gradient(#FFCE0B 0deg 313deg, rgba(255,255,255,0.1) 313deg 360deg);
+  background: conic-gradient(#FFB800 0deg 313deg, rgba(255,255,255,0.1) 313deg 360deg);
   position: relative;
   display: flex;
   align-items: center;

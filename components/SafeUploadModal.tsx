@@ -119,7 +119,7 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
             className="relative w-full max-w-[480px] bg-white rounded-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col"
           >
             {/* Top accent line */}
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#FFCE0B] to-[#FF9D00]" />
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#FFB800] to-[#FF9D00]" />
 
             {/* Header/Close */}
             <div className="flex justify-between items-center p-6 border-b border-gray-100 flex-shrink-0">
@@ -134,7 +134,7 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
                 </button>
               ) : (
                 <h3 className="text-xl font-bold text-[#0F172A] flex items-center gap-2">
-                  <ShieldCheck className="w-6 h-6 text-[#FFCE0B]" />
+                  <ShieldCheck className="w-6 h-6 text-[#FFB800]" />
                   সবচেয়ে নিরাপদ <span className="text-sm text-[#64748B] font-medium hidden sm:inline">(১০০% প্রাইভেসি)</span>
                 </h3>
               )}
@@ -166,9 +166,9 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
 
                     <div className="space-y-4">
                       {/* Option 1 */}
-                      <div className="border border-gray-200 rounded-2xl p-5 hover:border-[#FFCE0B]/30 transition-colors bg-gray-50/50 group">
+                      <div className="border border-gray-200 rounded-2xl p-5 hover:border-[#FFB800]/30 transition-colors bg-gray-50/50 group">
                         <div className="flex items-center gap-x-3 mb-3">
-                          <div className="w-10 h-10 bg-yellow-100 text-[#FFCE0B] rounded-xl flex items-center justify-center flex-shrink-0">
+                          <div className="w-10 h-10 bg-yellow-100 text-[#FFB800] rounded-xl flex items-center justify-center flex-shrink-0">
                             <LineChart className="w-5 h-5" />
                           </div>
                           <div>
@@ -181,16 +181,16 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
                         </div>
                         <button 
                           onClick={() => setView('insights')}
-                          className="mt-4 text-sm text-[#FFCE0B] font-bold flex items-center gap-x-1.5 hover:text-[#D4A809] transition-colors"
+                          className="mt-4 text-sm text-[#FFB800] font-bold flex items-center gap-x-1.5 hover:text-[#D4A809] transition-colors"
                         >
                           উদাহরণ দেখুন <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
                       </div>
 
                       {/* Option 2 */}
-                      <div className="border border-gray-200 rounded-2xl p-5 hover:border-[#FFCE0B]/30 transition-colors bg-gray-50/50 group">
+                      <div className="border border-gray-200 rounded-2xl p-5 hover:border-[#FFB800]/30 transition-colors bg-gray-50/50 group">
                         <div className="flex items-center gap-x-3 mb-3">
-                          <div className="w-10 h-10 bg-yellow-100 text-[#FFCE0B] rounded-xl flex items-center justify-center flex-shrink-0">
+                          <div className="w-10 h-10 bg-yellow-100 text-[#FFB800] rounded-xl flex items-center justify-center flex-shrink-0">
                             <Images className="w-5 h-5" />
                           </div>
                           <div>
@@ -202,7 +202,7 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
                         </div>
                         <button 
                           onClick={() => setView('posts')}
-                          className="mt-4 text-sm text-[#FFCE0B] font-bold flex items-center gap-x-1.5 hover:text-[#D4A809] transition-colors"
+                          className="mt-4 text-sm text-[#FFB800] font-bold flex items-center gap-x-1.5 hover:text-[#D4A809] transition-colors"
                         >
                           উদাহরণ দেখুন <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
@@ -218,7 +218,7 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
 
                     <button 
                       onClick={() => setView('upload')}
-                      className="mt-6 w-full py-4 bg-[#FFCE0B] hover:bg-[#D4A809] text-[#0F172A] font-bold rounded-2xl transition-all shadow-lg shadow-[#FFCE0B]/20 active:scale-[0.98] flex items-center justify-center gap-2"
+                      className="mt-6 w-full py-4 bg-[#FFB800] hover:bg-[#D4A809] text-[#0F172A] font-bold rounded-2xl transition-all shadow-lg shadow-[#FFB800]/20 active:scale-[0.98] flex items-center justify-center gap-2"
                     >
                       পরবর্তী ধাপ <ArrowRight className="w-5 h-5" />
                     </button>
@@ -246,12 +246,12 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
                       onDragLeave={!isSubmitting ? handleDragLeave : undefined}
                       onDrop={!isSubmitting ? handleDrop : undefined}
                       className={`border-2 border-dashed rounded-3xl p-8 text-center transition-all ${
-                        isSubmitting ? 'opacity-50 cursor-not-allowed border-gray-300' : 'cursor-pointer hover:border-[#FFCE0B]'
+                        isSubmitting ? 'opacity-50 cursor-not-allowed border-gray-300' : 'cursor-pointer hover:border-[#FFB800]'
                       } ${
-                        isDragging ? 'border-[#FFCE0B] bg-yellow-50' : 'border-gray-300 bg-gray-50/50'
+                        isDragging ? 'border-[#FFB800] bg-yellow-50' : 'border-gray-300 bg-gray-50/50'
                       }`}
                     >
-                      <div className="mx-auto w-14 h-14 bg-yellow-100 text-[#FFCE0B] rounded-2xl flex items-center justify-center mb-4 shadow-sm">
+                      <div className="mx-auto w-14 h-14 bg-yellow-100 text-[#FFB800] rounded-2xl flex items-center justify-center mb-4 shadow-sm">
                         <UploadCloud className="w-7 h-7" />
                       </div>
                       
@@ -313,7 +313,7 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
                       className={`mt-8 w-full py-4 text-[#0F172A] font-bold rounded-2xl text-lg transition-all flex items-center justify-center gap-2 ${
                         isSubmitting 
                           ? 'bg-[#D4A809] cursor-wait' 
-                          : 'bg-[#FFCE0B] hover:bg-[#D4A809] active:scale-[0.98] shadow-lg shadow-[#FFCE0B]/20'
+                          : 'bg-[#FFB800] hover:bg-[#D4A809] active:scale-[0.98] shadow-lg shadow-[#FFB800]/20'
                       }`}
                     >
                       {isSubmitting ? (
@@ -355,7 +355,7 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
                             <span>উদাহরণ ইমেজ ১</span>
                           </div>
                         </div>
-                        <p className="text-center text-sm font-bold text-[#FFCE0B] bg-yellow-50 py-2.5 rounded-xl border border-yellow-100">
+                        <p className="text-center text-sm font-bold text-[#FFB800] bg-yellow-50 py-2.5 rounded-xl border border-yellow-100">
                           এই ধরনের স্ক্রিনশট আপলোড করুন
                         </p>
                       </div>
@@ -368,7 +368,7 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
                             <span>উদাহরণ ইমেজ ২</span>
                           </div>
                         </div>
-                        <p className="text-center text-sm font-bold text-[#FFCE0B] bg-yellow-50 py-2.5 rounded-xl border border-yellow-100">
+                        <p className="text-center text-sm font-bold text-[#FFB800] bg-yellow-50 py-2.5 rounded-xl border border-yellow-100">
                           এই ধরনের স্ক্রিনশট আপলোড করুন
                         </p>
                       </div>

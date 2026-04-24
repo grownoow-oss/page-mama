@@ -89,7 +89,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
   };
 
   const inputClass =
-    'w-full border border-gray-200 focus:border-[#FFCE0B] focus:ring-2 focus:ring-[#FFCE0B]/20 outline-none px-5 py-3.5 rounded-2xl text-gray-900 placeholder:text-gray-400 transition-all bg-white text-sm';
+    'w-full border border-gray-200 focus:border-[#FFB800] focus:ring-2 focus:ring-[#FFB800]/20 outline-none px-5 py-3.5 rounded-2xl text-gray-900 placeholder:text-gray-400 transition-all bg-white text-sm';
 
   return (
     <AnimatePresence>
@@ -160,14 +160,14 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                       key={t}
                       onClick={() => { setTab(t); setError(''); }}
                       className={`flex-1 text-center py-2.5 font-bold text-sm transition-all relative ${
-                        tab === t ? 'text-[#FFCE0B]' : 'text-gray-400 hover:text-gray-600'
+                        tab === t ? 'text-[#FFB800]' : 'text-gray-400 hover:text-gray-600'
                       }`}
                     >
                       {t === 'login' ? 'লগইন' : 'সাইন আপ'}
                       {tab === t && (
                         <motion.div
                           layoutId="auth-tab-indicator"
-                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FFCE0B] rounded-t-full"
+                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FFB800] rounded-t-full"
                         />
                       )}
                     </button>
@@ -220,7 +220,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full py-4 bg-[#FFCE0B] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-2xl transition-colors shadow-lg shadow-yellow-500/30 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 mt-2"
+                        className="w-full py-4 bg-[#FFB800] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-2xl transition-colors shadow-lg shadow-yellow-500/30 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 mt-2"
                       >
                         {isLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : 'লগইন করুন'}
                       </button>
@@ -270,7 +270,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full py-4 bg-[#FFCE0B] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-2xl transition-colors shadow-lg shadow-yellow-500/30 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 mt-2"
+                        className="w-full py-4 bg-[#FFB800] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-2xl transition-colors shadow-lg shadow-yellow-500/30 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 mt-2"
                       >
                         {isLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : 'অ্যাকাউন্ট তৈরি করুন'}
                       </button>

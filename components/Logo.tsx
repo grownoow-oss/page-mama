@@ -41,7 +41,7 @@ export default function Logo({ className = '', size = 'md' }: LogoProps) {
         পেজ
       </span>
       <span 
-        className={`font-black ${currentSize} tracking-tighter text-[#FFCE0B]`} 
+        className={`font-black ${currentSize} tracking-tighter text-[#FFB800]`} 
         style={{ textShadow: bubblyStroke }}
       >
         মামা

@@ -58,7 +58,7 @@ export default function Dashboard() {
   if (loading) {
     return (
       <div className="min-h-screen bg-[#F8FAFC] flex items-center justify-center">
-        <Loader2 className="w-10 h-10 text-[#FFCE0B] animate-spin" />
+        <Loader2 className="w-10 h-10 text-[#FFB800] animate-spin" />
       </div>
     )
   }
@@ -76,14 +76,14 @@ export default function Dashboard() {
           <div className="text-sm text-gray-500 font-medium mb-1">Quick Check • ৯৯ টাকা</div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">আপনার পেজের স্বাস্থ্য রিপোর্ট</h1>
         </div>
-        <button onClick={handleDownloadPDF} className="px-6 py-3 bg-[#FFCE0B] hover:bg-[#E5BA0A] transition-colors text-[#0F172A] font-bold rounded-2xl flex items-center gap-x-2 shadow-sm text-sm">
+        <button onClick={handleDownloadPDF} className="px-6 py-3 bg-[#FFB800] hover:bg-[#E5BA0A] transition-colors text-[#0F172A] font-bold rounded-2xl flex items-center gap-x-2 shadow-sm text-sm">
           <Download className="w-4 h-4" /> Download PDF
         </button>
       </div>
 
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 mb-6">
         <div className="flex items-end gap-x-4">
-          <div className="text-[80px] leading-none font-extrabold text-[#FFCE0B] tracking-tighter">82</div>
+          <div className="text-[80px] leading-none font-extrabold text-[#FFB800] tracking-tighter">82</div>
           <div className="pb-4">
             <div className="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-bold rounded-2xl inline-block">+7</div>
           </div>
@@ -119,7 +119,7 @@ export default function Dashboard() {
             <RefreshCcw className={`w-4 h-4 ${isRegenerating ? 'animate-spin' : ''}`} />
             {isRegenerating ? 'Generating...' : 'Regenerate'}
           </button>
-          <button onClick={handleDownloadPDF} className="flex items-center gap-2 px-5 py-2.5 bg-[#FFCE0B] hover:bg-[#E5BA0A] text-[#0F172A] text-sm font-bold rounded-2xl transition-colors shadow-sm shadow-yellow-500/30">
+          <button onClick={handleDownloadPDF} className="flex items-center gap-2 px-5 py-2.5 bg-[#FFB800] hover:bg-[#E5BA0A] text-[#0F172A] text-sm font-bold rounded-2xl transition-colors shadow-sm shadow-yellow-500/30">
             <Download className="w-4 h-4" /> Download PDF
           </button>
         </div>
@@ -131,7 +131,7 @@ export default function Dashboard() {
           <div className="flex-shrink-0">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Overall Health Score</p>
             <div className="flex items-end gap-4">
-              <span className="text-[80px] sm:text-[96px] font-extrabold leading-none text-[#FFCE0B] tracking-tighter">87</span>
+              <span className="text-[80px] sm:text-[96px] font-extrabold leading-none text-[#FFB800] tracking-tighter">87</span>
               <div className="pb-3">
                 <p className="text-emerald-600 font-extrabold text-lg leading-tight">+12 ↑</p>
                 <p className="text-xs text-gray-400 font-medium">since last week</p>
@@ -209,9 +209,9 @@ export default function Dashboard() {
             { title: 'পোস্ট করুন শুধু রাত ৮:১৫ – ৯:৩০', desc: 'আপনার অডিয়েন্সের সবচেয়ে অ্যাকটিভ টাইম। রিচ ৪০% পর্যন্ত বাড়তে পারে।' },
           ].map((item, idx) => (
             <label key={idx} className={`flex items-start gap-4 p-4 sm:p-5 border rounded-2xl cursor-pointer transition-all group ${tasks[idx] ? 'border-emerald-200 bg-emerald-50/50' : 'border-gray-100 hover:border-yellow-200 hover:bg-yellow-50/30'}`}>
-              <input type="checkbox" checked={tasks[idx]} onChange={() => toggleTask(idx)} className="w-5 h-5 mt-0.5 rounded accent-[#FFCE0B] cursor-pointer flex-shrink-0" />
+              <input type="checkbox" checked={tasks[idx]} onChange={() => toggleTask(idx)} className="w-5 h-5 mt-0.5 rounded accent-[#FFB800] cursor-pointer flex-shrink-0" />
               <div>
-                <p className={`font-semibold text-sm transition-colors ${tasks[idx] ? 'line-through text-gray-400' : 'text-gray-900 group-hover:text-[#FFCE0B]'}`}>{item.title}</p>
+                <p className={`font-semibold text-sm transition-colors ${tasks[idx] ? 'line-through text-gray-400' : 'text-gray-900 group-hover:text-[#FFB800]'}`}>{item.title}</p>
                 <p className="text-xs text-gray-500 mt-1 leading-relaxed">{item.desc}</p>
               </div>
             </label>
@@ -228,7 +228,7 @@ export default function Dashboard() {
           <div className="text-sm text-gray-500 font-medium mb-1">Pro Plan • {user.email}</div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">আপনার পেজের স্বাস্থ্য রিপোর্ট</h1>
         </div>
-        <button onClick={handleDownloadPDF} className="px-6 py-3 bg-[#FFCE0B] hover:bg-[#E5BA0A] transition-colors text-[#0F172A] font-bold rounded-2xl shadow-sm text-sm flex items-center gap-2">
+        <button onClick={handleDownloadPDF} className="px-6 py-3 bg-[#FFB800] hover:bg-[#E5BA0A] transition-colors text-[#0F172A] font-bold rounded-2xl shadow-sm text-sm flex items-center gap-2">
           <Download className="w-4 h-4" /> Download Full Report
         </button>
       </div>
@@ -236,7 +236,7 @@ export default function Dashboard() {
       <div className="grid md:grid-cols-12 gap-6 mb-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="md:col-span-7 bg-white rounded-3xl border border-gray-100 shadow-sm p-8">
           <div className="flex items-end gap-x-4">
-            <div className="text-[80px] sm:text-[92px] leading-none font-extrabold text-[#FFCE0B] tracking-tighter">91</div>
+            <div className="text-[80px] sm:text-[92px] leading-none font-extrabold text-[#FFB800] tracking-tighter">91</div>
             <div className="pb-4"><div className="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-bold rounded-2xl inline-block">+19</div></div>
           </div>
           <div className="text-sm font-semibold text-gray-500 uppercase tracking-widest mt-2">Health Score</div>
@@ -262,7 +262,7 @@ export default function Dashboard() {
         <div className="font-extrabold text-xl text-gray-900 mb-6">প্রো ফিচারস</div>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { label: 'আপনার জন্য', color: 'bg-yellow-50/50 border-yellow-100', numColor: 'bg-yellow-100 text-[#FFCE0B]', items: ['সপ্তাহিক PDF রিপোর্ট', 'প্রায়োরিটি WhatsApp সাপোর্ট', 'অ্যাডভান্সড অ্যাকশন প্ল্যান'] },
+            { label: 'আপনার জন্য', color: 'bg-yellow-50/50 border-yellow-100', numColor: 'bg-yellow-100 text-[#FFB800]', items: ['সপ্তাহিক PDF রিপোর্ট', 'প্রায়োরিটি WhatsApp সাপোর্ট', 'অ্যাডভান্সড অ্যাকশন প্ল্যান'] },
             { label: 'টিমের জন্য', color: 'bg-emerald-50/50 border-emerald-100', numColor: 'bg-emerald-100 text-emerald-600', items: ['টিম মেম্বার অ্যাক্সেস (5 জন)', 'কম্পিটিটর অ্যানালাইসিস', 'প্রায়োরিটি সাপোর্ট'] },
           ].map((section, si) => (
             <div key={si} className={`rounded-2xl p-6 border ${section.color}`}>
@@ -308,7 +308,7 @@ export default function Dashboard() {
               {showPlanMenu && (
                 <div className="absolute top-full left-0 mt-2 w-40 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden z-50">
                   {['Quick Check', 'Smart Growth', 'Pro'].map((p) => (
-                    <button key={p} onClick={() => handlePlanChange(p)} className={`w-full text-left px-4 py-2.5 text-sm font-semibold hover:bg-gray-50 transition-colors ${planType === p ? 'text-[#FFCE0B] bg-yellow-50/50' : 'text-gray-700'}`}>{p}</button>
+                    <button key={p} onClick={() => handlePlanChange(p)} className={`w-full text-left px-4 py-2.5 text-sm font-semibold hover:bg-gray-50 transition-colors ${planType === p ? 'text-[#FFB800] bg-yellow-50/50' : 'text-gray-700'}`}>{p}</button>
                   ))}
                 </div>
               )}
@@ -317,7 +317,7 @@ export default function Dashboard() {
 
           <div className="flex items-center gap-x-3">
             <div className="hidden sm:flex items-center gap-x-2">
-              <div className="w-8 h-8 bg-yellow-100 text-[#FFCE0B] rounded-full flex items-center justify-center text-xs font-extrabold">
+              <div className="w-8 h-8 bg-yellow-100 text-[#FFB800] rounded-full flex items-center justify-center text-xs font-extrabold">
                 {initials}
               </div>
               <span className="font-semibold text-sm text-gray-700">{displayName}</span>

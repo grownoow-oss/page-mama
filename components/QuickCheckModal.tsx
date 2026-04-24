@@ -118,7 +118,7 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
                     onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
                     disabled={isSubmitting}
                     placeholder="https://www.facebook.com/yourpage"
-                    className={`w-full pl-12 pr-5 py-4 border ${error ? 'border-red-400 focus:border-red-500' : 'border-gray-200 focus:border-[#FFCE0B]'} rounded-2xl text-sm font-medium placeholder:text-gray-400 focus:outline-none transition-colors bg-gray-50/50 focus:bg-white`}
+                    className={`w-full pl-12 pr-5 py-4 border ${error ? 'border-red-400 focus:border-red-500' : 'border-gray-200 focus:border-[#FFB800]'} rounded-2xl text-sm font-medium placeholder:text-gray-400 focus:outline-none transition-colors bg-gray-50/50 focus:bg-white`}
                   />
                 </div>
                 

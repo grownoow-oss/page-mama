@@ -25,7 +25,7 @@ export default function SampleReportPage() {
             <h1 className="text-4xl font-semibold tracking-tight">আপনার পেজের AI বিশ্লেষণ রিপোর্ট</h1>
           </div>
           <div className="text-right">
-            <div className="text-6xl font-bold text-[#FFCE0B]">61</div>
+            <div className="text-6xl font-bold text-[#FFB800]">61</div>
             <div className="text-sm text-gray-500 -mt-1">/100 Health Score</div>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function SampleReportPage() {
               onClick={() => setActiveTab(tab.id as any)}
               className={`px-8 py-4 font-semibold text-lg transition-all relative ${
                 activeTab === tab.id 
-                  ? 'text-[#FFCE0B]' 
+                  ? 'text-[#FFB800]' 
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -48,7 +48,7 @@ export default function SampleReportPage() {
               {activeTab === tab.id && (
                 <motion.div 
                   layoutId="underline"
-                  className="absolute bottom-0 left-0 h-[3px] bg-[#FFCE0B] w-full"
+                  className="absolute bottom-0 left-0 h-[3px] bg-[#FFB800] w-full"
                 />
               )}
             </button>

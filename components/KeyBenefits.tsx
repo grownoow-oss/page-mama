@@ -34,12 +34,12 @@ export default function KeyBenefits() {
 
   return (
     <div id="benefits" className="relative py-20 md:py-32 border-t border-gray-100 bg-[#FAFAFA]">
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#FFCE0B]/5 blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#FFB800]/5 blur-[120px] pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0F172A]">
-            ৩০ সেকেন্ডে <span className="text-[#FFCE0B]">যা পাবেন</span>
+            ৩০ সেকেন্ডে <span className="text-[#FFB800]">যা পাবেন</span>
           </h2>
         </div>
         
