@@ -1,40 +1,41 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { AlertTriangle, TrendingUp, BarChart2, CheckCircle, Video, Image as ImageIcon, Type, ArrowRight } from 'lucide-react';
+import { AlertTriangle, TrendingUp, BarChart2, CheckCircle, Video, Image as ImageIcon, Type, ArrowRight, Star } from 'lucide-react';
+import DemoPlanSelector from '../components/DemoPlanSelector';
 import Logo from '../components/Logo';
 import Navbar from '../components/Navbar';
 
-export default function SampleReport() {
+export default function SmartGrowthDemo() {
   const router = useRouter();
 
   return (
     <>
       <Head>
-        <title>নমুনা রিপোর্ট — বাস্তব উদাহরণ | Page Mama</title>
+        <title>স্মার্ট গ্রোথ রিপোর্ট — নমুনা | Page Mama</title>
       </Head>
       <div className="bg-[#FFFAF5] min-h-screen text-[#0F172A] font-sans pb-20">
         <Navbar />
 
-        {/* Report badge sub-bar */}
+        {/* Plan badge sub-bar */}
         <div className="sticky top-[76px] z-40 bg-white border-b border-gray-100">
-          <div className="max-w-4xl mx-auto px-4 h-12 flex items-center justify-between">
-            <span className="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-              নমুনা রিপোর্ট
+          <div className="max-w-4xl mx-auto px-4 h-12 flex items-center gap-3">
+            <span className="bg-[#FFB800]/10 text-[#FFB800] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
+              <Star className="w-3 h-3 fill-current" /> Smart Growth
             </span>
-            <span className="text-xs font-bold text-gray-400 hidden sm:inline-block">এটি একটি বাস্তব উদাহরণ</span>
           </div>
         </div>
 
+        <DemoPlanSelector />
+
         <main className="max-w-3xl mx-auto px-4 pt-8 sm:pt-12 space-y-6 sm:space-y-8">
           
-          {/* Hero Section */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100 text-center relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#FFB800] to-[#FF8A3D]" />
-            <h1 className="text-2xl sm:text-3xl font-black mb-1">ঢাকা ফ্যাশন হাব</h1>
+            <h1 className="text-2xl sm:text-3xl font-black mb-1">স্মার্ট গ্রোথ রিপোর্ট — নমুনা</h1>
             <div className="flex items-center justify-center gap-4 text-sm font-bold text-gray-500 mb-8">
-              <span>৬৮,৪২০ ফলোয়ার্স</span>
+              <span>ঢাকা ফ্যাশন হাব</span>
               <span className="w-1 h-1 bg-gray-300 rounded-full" />
-              <span>২৪ এপ্রিল ২০২৬</span>
+              <span>৬৮,৪২০ ফলোয়ার্স</span>
             </div>
 
             <div className="inline-block relative mb-4">
@@ -45,19 +46,8 @@ export default function SampleReport() {
             </div>
             
             <div className="text-sm font-bold text-gray-400 tracking-wide uppercase mb-4">হেলথ স্কোর</div>
-            
-            <div className="max-w-xs mx-auto">
-              <div className="flex justify-between text-xs font-bold mb-2">
-                <span className="text-gray-500">স্ট্যাটাস</span>
-                <span className="text-emerald-600">স্বাস্থ্য: ভালো</span>
-              </div>
-              <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full bg-emerald-500 w-[87%] rounded-full" />
-              </div>
-            </div>
           </div>
 
-          {/* 1. মূল সমস্যা */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center">
@@ -87,10 +77,23 @@ export default function SampleReport() {
                   <div className="text-sm text-orange-600 font-medium mt-1">এঙ্গেজমেন্ট কম</div>
                 </div>
               </div>
+              <div className="flex items-start gap-3 p-4 bg-orange-50/50 rounded-2xl border border-orange-100">
+                <AlertTriangle className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
+                <div>
+                  <div className="font-bold text-[#0F172A]">ভিডিও কনটেন্টের অভাব</div>
+                  <div className="text-sm text-orange-600 font-medium mt-1">ভিডিও রিচ মিস হচ্ছে</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-yellow-50/50 rounded-2xl border border-yellow-100">
+                <AlertTriangle className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
+                <div>
+                  <div className="font-bold text-[#0F172A]">কমেন্টের দেরিতে রিপ্লাই</div>
+                  <div className="text-sm text-yellow-600 font-medium mt-1">পেজ রেসপন্স রেট কমেছে</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* 2. স্প্যামি শব্দ সমূহ */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100">
             <h2 className="text-xl font-black mb-6">স্প্যামি শব্দ সমূহ</h2>
             <div className="overflow-x-auto">
@@ -113,17 +116,31 @@ export default function SampleReport() {
                     <td className="py-4 text-gray-500">৮ বার</td>
                     <td className="py-4 text-right text-red-500">-১২%</td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-gray-50">
                     <td className="py-4 text-[#0F172A] font-bold">অফার</td>
                     <td className="py-4 text-gray-500">৭ বার</td>
                     <td className="py-4 text-right text-orange-500">-৯%</td>
+                  </tr>
+                  <tr className="border-b border-gray-50">
+                    <td className="py-4 text-[#0F172A] font-bold">ফ্রি ডেলিভারি</td>
+                    <td className="py-4 text-gray-500">৫ বার</td>
+                    <td className="py-4 text-right text-orange-500">-৬%</td>
+                  </tr>
+                  <tr className="border-b border-gray-50">
+                    <td className="py-4 text-[#0F172A] font-bold">কিনুন</td>
+                    <td className="py-4 text-gray-500">৪ বার</td>
+                    <td className="py-4 text-right text-yellow-500">-৩%</td>
+                  </tr>
+                  <tr>
+                    <td className="py-4 text-[#0F172A] font-bold">১ কিনলে ১ ফ্রি</td>
+                    <td className="py-4 text-gray-500">২ বার</td>
+                    <td className="py-4 text-right text-yellow-500">-২%</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
 
-          {/* 3. রিচ অ্যানালাইসিস */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center">
@@ -135,7 +152,6 @@ export default function SampleReport() {
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100">
                 <div className="text-sm font-bold text-gray-500 mb-4">গত ৭ দিনের রিচ ট্রেন্ড</div>
-                {/* Fake Line Chart */}
                 <div className="h-24 flex items-end gap-2">
                   <div className="w-full bg-[#FFB800]/20 rounded-t-sm h-[40%]" />
                   <div className="w-full bg-[#FFB800]/40 rounded-t-sm h-[30%]" />
@@ -164,7 +180,6 @@ export default function SampleReport() {
             </div>
           </div>
 
-          {/* 4. কনটেন্ট পারফরম্যান্স */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-purple-50 text-purple-500 rounded-xl flex items-center justify-center">
@@ -204,10 +219,7 @@ export default function SampleReport() {
             </div>
           </div>
 
-          {/* 5. ৭ দিনের অ্যাকশন প্ল্যান */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-[#FFB800]/30 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFB800]/5 rounded-bl-full pointer-events-none" />
-            
             <h2 className="text-xl font-black mb-6">৭ দিনের অ্যাকশন প্ল্যান</h2>
             <div className="space-y-4">
               {[
@@ -218,7 +230,7 @@ export default function SampleReport() {
                 { title: 'সপ্তাহে ৩টা কনটেস্ট/গিফট পোস্ট করুন', reason: 'অর্গানিক শেয়ার ও এঙ্গেজমেন্ট বাড়াতে' },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-gray-300 shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
                   <div>
                     <div className="font-bold text-[#0F172A]">{item.title}</div>
                     <div className="text-xs text-gray-500 font-medium mt-1">কেন করবেন: {item.reason}</div>
@@ -228,10 +240,7 @@ export default function SampleReport() {
             </div>
           </div>
 
-          {/* 6. প্রত্যাশিত ফলাফল */}
           <div className="bg-[#0F172A] rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-[#FFB800]/10 rounded-full blur-2xl pointer-events-none" />
-            
             <h2 className="text-xl font-black mb-2">প্রত্যাশিত ফলাফল</h2>
             <p className="text-sm text-gray-400 font-bold mb-6">যদি ৭ দিনের প্ল্যান ফলো করেন:</p>
             
@@ -249,25 +258,19 @@ export default function SampleReport() {
                 <div className="text-xl sm:text-2xl font-black text-emerald-400">+২৯%*</div>
               </div>
             </div>
-            <div className="mt-4 text-center text-[10px] text-gray-500">*(বাস্তব ইউজারদের গড় ফলাফল)</div>
           </div>
 
-          {/* Bottom CTA */}
           <div className="pt-8 text-center">
-            <button onClick={() => router.push('/#pricing')} className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FFB800] hover:bg-[#D4A809] text-[#0F172A] rounded-2xl text-lg font-black transition-all shadow-lg hover:shadow-xl w-full sm:w-auto active:scale-[0.98]">
-              স্মার্ট গ্রোথে আপগ্রেড করুন (২৯৯ টাকা)
+            <button onClick={() => router.push('/#pricing')} className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl text-lg font-black transition-all shadow-lg w-full sm:w-auto">
+              Pro তে আপগ্রেড করুন
               <ArrowRight className="w-5 h-5" />
             </button>
             <div className="text-sm text-gray-500 font-bold mt-4">
-              ১৫ দিনের মানি-ব্যাক গ্যারান্টি • কোনো কার্ড লাগবে না
+              কম্পিটিটর অ্যানালাইসিস এবং WhatsApp সাপোর্ট পেতে (৫৯৯ টাকা)
             </div>
           </div>
           
         </main>
-        
-        <footer className="mt-16 text-center text-xs text-gray-400 font-medium px-4">
-          এই রিপোর্টটি আসল ইউজারের ডেটা থেকে তৈরি করা হয়েছে (নাম পরিবর্তন করা হয়েছে)
-        </footer>
       </div>
     </>
   );

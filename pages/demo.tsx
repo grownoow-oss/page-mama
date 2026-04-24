@@ -1,9 +1,7 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { 
-  Shield, 
   RefreshCw, 
   Download, 
   ArrowUpRight, 
@@ -15,6 +13,7 @@ import {
   Sun,
   Sunrise
 } from 'lucide-react';
+import Navbar from '../components/Navbar';
 
 export default function DemoReport() {
   const router = useRouter();
@@ -66,22 +65,14 @@ export default function DemoReport() {
       </Head>
       <div className="bg-[#F8FAFC] min-h-screen font-['Inter',_'Noto_Sans_Bengali',_sans-serif] text-[#111827]">
         
-        {/* Top Navigation */}
-        <nav className="bg-white border-b sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
-            <div className="flex items-center gap-x-3 sm:gap-x-4">
-              <Link href="/" className="flex items-center gap-x-2 sm:gap-x-3">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FFB800] rounded-xl flex items-center justify-center shadow-sm">
-                  <Shield className="text-white w-5 h-5 sm:w-6 sm:h-6" />
-                </div>
-                <div className="hidden xs:block">
-                  <span className="font-extrabold text-xl sm:text-2xl tracking-tighter">Page</span>
-                  <span className="font-extrabold text-xl sm:text-2xl tracking-tighter text-[#FFB800]">Mama</span>
-                </div>
-              </Link>
-              <div className="bg-yellow-50 text-[#FFB800] text-[10px] sm:text-xs font-bold px-2 py-1 rounded-lg tracking-wider">DEMO</div>
+        <Navbar />
+
+        {/* Demo top bar */}
+        <div className="sticky top-[80px] z-40 bg-white border-b border-gray-100 shadow-sm">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+            <div className="flex items-center gap-x-2">
+              <div className="bg-yellow-50 text-[#FFB800] text-[10px] sm:text-xs font-bold px-2 py-1 rounded-lg tracking-wider">DEMO REPORT</div>
             </div>
-            
             <div className="flex items-center gap-x-2 sm:gap-x-4">
               <button 
                 onClick={handleRegenerate}
@@ -91,18 +82,17 @@ export default function DemoReport() {
                 <RefreshCw className={`w-4 h-4 ${isRegenerating ? 'animate-spin' : ''}`} />
                 <span>{isRegenerating ? 'Regenerating...' : 'Regenerate'}</span>
               </button>
-              
               <button 
                 onClick={handleDownload}
                 disabled={isRegenerating || isDownloading}
-                className="flex items-center gap-x-2 px-4 sm:px-6 py-2.5 bg-[#FFB800] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-xl sm:rounded-2xl text-xs sm:text-sm transition-all disabled:opacity-50 shadow-md shadow-yellow-500/20"
+                className="flex items-center gap-x-2 px-4 sm:px-6 py-2 bg-[#FFB800] hover:bg-[#E5BA0A] text-[#0F172A] font-bold rounded-xl sm:rounded-2xl text-xs sm:text-sm transition-all disabled:opacity-50 shadow-md shadow-yellow-500/20"
               >
                 <Download className={`w-4 h-4 ${isDownloading ? 'animate-pulse' : ''}`} />
                 <span>{isDownloading ? 'Generating...' : 'Download PDF'}</span>
               </button>
             </div>
           </div>
-        </nav>
+        </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
           

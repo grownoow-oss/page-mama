@@ -6,7 +6,7 @@ export default function Hero() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-[100dvh] flex items-center pt-32 pb-20 overflow-hidden bg-[#FFFAF5]">
+    <div className="relative min-h-[100dvh] flex items-center pt-28 sm:pt-32 pb-20 overflow-hidden bg-[#FFFAF5]">
       {/* Background Effects */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#FFB800]/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
@@ -104,11 +104,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
-              className="flex flex-wrap items-center gap-6 mt-10 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-10 justify-center lg:justify-start"
             >
               <button 
                 onClick={() => setIsVideoModalOpen(true)}
-                className="flex items-center gap-x-4 px-6 py-3.5 bg-white border border-gray-100 rounded-3xl text-sm font-bold transition-all shadow-sm hover:shadow-md group"
+                className="flex items-center gap-x-4 px-6 py-3.5 bg-white border border-gray-100 rounded-3xl text-sm font-bold transition-all shadow-sm hover:shadow-md group w-full sm:w-auto justify-center"
               >
                 <div className="w-9 h-9 bg-[#FFB800] text-white rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
                   <Play className="w-4 h-4 ml-0.5 fill-current" />
@@ -118,12 +118,36 @@ export default function Hero() {
                   <div className="text-[11px] text-gray-400 font-bold">৪৭ সেকেন্ড</div>
                 </div>
               </button>
-              <div className="text-[13px] text-gray-400 font-bold">দেখুন কীভাবে কাজ করে</div>
+
+              <a 
+                href="/sample-report"
+                className="flex items-center justify-center px-8 py-4 bg-[#0F172A] hover:bg-[#1E293B] text-white rounded-3xl text-[15px] font-black transition-all shadow-md hover:shadow-xl w-full sm:w-auto"
+              >
+                নমুনা রিপোর্ট দেখুন →
+              </a>
+            </motion.div>
+
+            {/* WhatsApp Contact */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mt-8 flex justify-center lg:justify-start"
+            >
+              <a 
+                href="https://wa.me/8801700000000" 
+                target="_blank" 
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#25D366]/10 text-[#25D366] rounded-full text-sm font-bold hover:bg-[#25D366]/20 transition-colors"
+              >
+                <div className="w-2 h-2 bg-[#25D366] rounded-full animate-pulse" />
+                সাহায্য লাগলে WhatsApp করুন: 017XXXXXXXX
+              </a>
             </motion.div>
           </div>
           
           {/* Right Visual */}
-          <div className="lg:col-span-5 relative mt-12 lg:mt-0">
+          <div className="lg:col-span-5 relative mt-8 lg:mt-0 px-4 sm:px-0">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -168,7 +192,7 @@ export default function Hero() {
                       <div>
                         <div className="flex justify-between items-center text-[11px] font-bold mb-3 tracking-wide">
                           <span className="text-gray-400 uppercase">রিচ পটেনশিয়াল</span>
-                          <span className="text-emerald-400 font-mono">+34%</span>
+                          <span className="text-emerald-400 font-mono">+34%*</span>
                         </div>
                         <div className="h-2 bg-white/5 rounded-full overflow-hidden">
                           <motion.div 
@@ -183,7 +207,7 @@ export default function Hero() {
                       <div className="flex justify-between items-end">
                         <div>
                           <div className="text-[10px] text-gray-500 font-bold tracking-widest uppercase mb-2">গ্রোথ (গত ৭ দিনে)</div>
-                          <div className="text-4xl font-black text-white">+১২.৮%</div>
+                          <div className="text-4xl font-black text-white">+১২.৮%*</div>
                         </div>
                         <div className="px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black rounded-lg tracking-wider">
                           GROWTH
@@ -191,6 +215,7 @@ export default function Hero() {
                       </div>
                     </div>
                   </div>
+                  <div className="absolute bottom-4 left-0 w-full text-center text-[10px] text-gray-500/50">*(বাস্তব ইউজারদের গড় ফলাফল)</div>
                 </div>
               </div>
 
@@ -199,7 +224,7 @@ export default function Hero() {
                 initial={{ x: 20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 1 }}
-                className="absolute -bottom-6 -right-6 bg-white p-5 rounded-3xl shadow-2xl border border-gray-50 flex items-center gap-4 z-20"
+                className="absolute -bottom-4 right-0 sm:-bottom-6 sm:-right-6 bg-white p-4 sm:p-5 rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-50 flex items-center gap-3 sm:gap-4 z-20 max-w-[180px] sm:max-w-none"
               >
                 <div className="w-12 h-12 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center">
                   <Activity className="w-6 h-6" />

@@ -71,10 +71,13 @@ export default function Pricing() {
                 features: ['স্প্যামি শব্দ চিহ্নিতকরণ', 'Reach সমস্যা বিশ্লেষণ', 'বেসিক রিপোর্ট'],
                 popular: false
               })}
-              className="w-full py-3.5 bg-white text-[#0F172A] font-bold rounded-2xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+              className="w-full py-3.5 bg-white text-[#0F172A] font-bold rounded-2xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors mb-3"
             >
               শুরু করুন
             </button>
+            <a href="/quick-check-demo" className="block text-center text-sm font-bold text-[#FFB800] hover:text-[#D4A809] transition-colors">
+              নমুনা রিপোর্ট দেখুন
+            </a>
           </div>
 
           
@@ -130,10 +133,13 @@ export default function Pricing() {
                 features: ['স্প্যামি শব্দ + Reach বিশ্লেষণ', 'কনটেন্ট পারফরম্যান্স ইনসাইট', 'পোস্টিং স্ট্র্যাটেজি + টাইমিং', 'সাপ্তাহিক অ্যাকশন প্ল্যান'],
                 popular: true
               })}
-              className="w-full py-3.5 bg-[#FFB800] hover:bg-[#FF7324] text-[#0F172A] font-bold rounded-2xl transition-colors shadow-lg shadow-[#FFB800]/20"
+              className="w-full py-3.5 bg-[#FFB800] hover:bg-[#FF7324] text-[#0F172A] font-bold rounded-2xl transition-colors shadow-lg shadow-[#FFB800]/20 mb-3"
             >
               স্মার্ট গ্রোথ শুরু করুন
             </button>
+            <a href="/smart-growth-demo" className="block text-center text-sm font-bold text-[#64748B] hover:text-[#0F172A] transition-colors">
+              নমুনা রিপোর্ট দেখুন
+            </a>
           </div>
           
           {/* Pro */}
@@ -188,10 +194,13 @@ export default function Pricing() {
                 features: ['স্মার্ট গ্রোথের সব সুবিধা', '৩টি কম্পিটিটর অ্যানালাইসিস', 'WhatsApp রিয়েল-টাইম সাপোর্ট', 'সাপ্তাহিক PDF রিপোর্ট', 'প্রায়োরিটি সাপোর্ট'],
                 popular: false
               })}
-              className="w-full py-3.5 bg-white text-[#0F172A] font-bold rounded-2xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+              className="w-full py-3.5 bg-white text-[#0F172A] font-bold rounded-2xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors mb-3"
             >
               প্রিমিয়াম নিন
             </button>
+            <a href="/pro-demo" className="block text-center text-sm font-bold text-[#FFB800] hover:text-[#D4A809] transition-colors">
+              নমুনা রিপোর্ট দেখুন
+            </a>
           </div>
         </div>
         

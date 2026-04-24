@@ -10,7 +10,9 @@ import TrustBar from '../components/TrustBar'
 import HowItWorks from '../components/HowItWorks'
 import KeyBenefits from '../components/KeyBenefits'
 import SocialProof from '../components/SocialProof'
+import CaseStudy from '../components/CaseStudy'
 import Pricing from '../components/Pricing'
+import PostPaymentFlow from '../components/PostPaymentFlow'
 import FAQ from '../components/FAQ'
 import CTABottom from '../components/CTABottom'
 import Footer from '../components/Footer'
@@ -119,8 +121,10 @@ export default function Home() {
         <TrustBar />
         <HowItWorks />
         <KeyBenefits />
+        <CaseStudy />
         <SocialProof />
         <Pricing />
+        <PostPaymentFlow />
         <FAQ />
         <CTABottom />
         <Footer />
