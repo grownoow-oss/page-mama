@@ -41,12 +41,12 @@ export default function Navbar() {
     <>
       <div className="fixed top-4 md:top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
         <nav 
-          className={`pointer-events-auto transition-all duration-400 bg-white/95 backdrop-blur-md w-full max-w-[1100px] overflow-hidden ${
+          className={`pointer-events-auto transition-all duration-500 bg-white/80 backdrop-blur-xl w-full max-w-[1100px] overflow-hidden ${
             isOpen ? 'rounded-[2rem]' : 'rounded-full'
           } ${
             scrolled 
-              ? 'shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 py-2.5' 
-              : 'shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-50 py-3.5'
+              ? 'shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-white/50 py-3' 
+              : 'shadow-[0_8px_30px_rgba(0,0,0,0.02)] border border-gray-100/50 py-4'
           }`}
         >
           <div className="px-5 md:px-8 w-full flex items-center justify-between">
@@ -82,7 +82,7 @@ export default function Navbar() {
               ) : (
                 <button 
                   onClick={showLoginModal}
-                  className="hidden md:flex items-center justify-center px-8 py-3 text-sm font-black bg-[#FFB800] text-white hover:shadow-[0_8px_20px_rgba(255,184,0,0.25)] hover:-translate-y-0.5 rounded-full transition-all duration-300 active:scale-[0.98]"
+                  className="hidden md:flex items-center justify-center px-8 py-2.5 text-sm font-bold text-[#0F172A] border-2 border-[#0F172A]/5 hover:bg-[#0F172A] hover:text-white rounded-full transition-all duration-300"
                 >
                   লগইন
                 </button>
@@ -104,31 +104,66 @@ export default function Navbar() {
             {isOpen && (
               <motion.div 
                 initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                animate={{ 
+                  opacity: 1, 
+                  height: 'auto',
+                  transition: { 
+                    height: { type: 'spring', damping: 25, stiffness: 200 },
+                    opacity: { duration: 0.2 }
+                  }
+                }}
+                exit={{ 
+                  opacity: 0, 
+                  height: 0,
+                  transition: { 
+                    height: { duration: 0.3 },
+                    opacity: { duration: 0.2 }
+                  }
+                }}
                 className="lg:hidden bg-white/95"
               >
-                <div className="px-6 py-6 pb-8 space-y-2 border-t border-gray-50 mt-2">
+                <motion.div 
+                  initial="closed"
+                  animate="open"
+                  variants={{
+                    open: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+                    closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } }
+                  }}
+                  className="px-6 py-6 pb-8 space-y-2 border-t border-gray-50 mt-2"
+                >
                   {navLinks.map((link, idx) => (
-                    <Link 
-                      key={idx} 
-                      href={link.href} 
-                      onClick={() => setIsOpen(false)}
-                      className="block px-4 py-3.5 text-[#475569] font-bold hover:text-[#FFB800] hover:bg-yellow-50/50 rounded-2xl transition-colors text-center"
+                    <motion.div
+                      key={idx}
+                      variants={{
+                        open: { opacity: 1, y: 0, scale: 1 },
+                        closed: { opacity: 0, y: 10, scale: 0.95 }
+                      }}
                     >
-                      {link.name}
-                    </Link>
+                      <Link 
+                        href={link.href} 
+                        onClick={() => setIsOpen(false)}
+                        className="block px-4 py-3.5 text-[#475569] font-bold hover:text-[#FFB800] hover:bg-yellow-50/50 rounded-2xl transition-all duration-300 text-center active:scale-[0.98]"
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
                   ))}
                   
-                  <div className="pt-4 mt-4 border-t border-gray-50">
+                  <motion.div 
+                    variants={{
+                      open: { opacity: 1, y: 0, scale: 1 },
+                      closed: { opacity: 0, y: 10, scale: 0.95 }
+                    }}
+                    className="pt-4 mt-4 border-t border-gray-50"
+                  >
                     <button 
                       onClick={showLoginModal} 
-                      className="w-full flex items-center justify-center py-4 bg-[#FFB800] text-white font-black rounded-full active:scale-[0.98] transition-all shadow-md shadow-[#FFB800]/20"
+                      className="w-full flex items-center justify-center py-4 bg-[#FFB800] text-white font-black rounded-full active:scale-[0.95] transition-all shadow-lg shadow-[#FFB800]/20"
                     >
                       লগইন
                     </button>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>

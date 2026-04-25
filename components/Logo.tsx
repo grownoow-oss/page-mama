@@ -2,50 +2,35 @@ import React from 'react';
 
 interface LogoProps {
   className?: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'inline';
+  textOnly?: boolean;
 }
 
-export default function Logo({ className = '', size = 'md' }: LogoProps) {
+export default function Logo({ className = '', size = 'md', textOnly = false }: LogoProps) {
   const sizeClasses = {
-    sm: 'text-2xl sm:text-3xl',
-    md: 'text-3xl sm:text-4xl',
-    lg: 'text-4xl sm:text-5xl',
+    sm: 'text-2xl',
+    md: 'text-3xl',
+    lg: 'text-4xl',
+    inline: 'text-[inherit]',
   };
 
   const currentSize = sizeClasses[size];
-  const strokeColor = '#4A0E1B';
-  const strokeWidth = '2px';
   
-  // Create a thick bubbly stroke using multiple text shadows
-  const bubblyStroke = `
-    ${strokeWidth} ${strokeWidth} 0 ${strokeColor},
-    -${strokeWidth} -${strokeWidth} 0 ${strokeColor},
-    ${strokeWidth} -${strokeWidth} 0 ${strokeColor},
-    -${strokeWidth} ${strokeWidth} 0 ${strokeColor},
-    ${strokeWidth} 0 0 ${strokeColor},
-    -${strokeWidth} 0 0 ${strokeColor},
-    0 ${strokeWidth} 0 ${strokeColor},
-    0 -${strokeWidth} 0 ${strokeColor},
-    1px 1px 0 ${strokeColor},
-    -1px -1px 0 ${strokeColor},
-    1px -1px 0 ${strokeColor},
-    -1px 1px 0 ${strokeColor}
-  `;
-
   return (
-    <div className={`flex items-baseline ${className}`} style={{ fontFamily: 'system-ui, sans-serif' }}>
-      <span 
-        className={`font-black ${currentSize} tracking-tighter text-white`} 
-        style={{ textShadow: bubblyStroke }}
-      >
-        পেজ
-      </span>
-      <span 
-        className={`font-black ${currentSize} tracking-tighter text-[#FFB800]`} 
-        style={{ textShadow: bubblyStroke }}
-      >
-        মামা
-      </span>
+    <div className={`${!textOnly ? 'flex items-center gap-2.5' : 'inline-block'} ${className}`}>
+      {/* Sleek Icon Mark */}
+      {!textOnly && (
+        <div className="relative group shrink-0">
+          <div className="w-9 h-9 sm:w-11 sm:h-11 bg-[#0F172A] rounded-xl flex items-center justify-center transform transition-transform group-hover:rotate-6 shadow-xl shadow-black/5">
+            <div className="w-6 h-6 bg-[#FFB800] rounded-lg rotate-12" />
+          </div>
+        </div>
+      )}
+
+      {/* Modern Bengali Typography */}
+      <div className={`font-black ${currentSize} tracking-tighter text-[#0F172A] leading-none pt-1`}>
+        পেজ<span className="text-[#FFB800]">মামা</span>
+      </div>
     </div>
   );
 }

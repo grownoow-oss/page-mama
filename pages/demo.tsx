@@ -63,7 +63,7 @@ export default function DemoReport() {
       <Head>
         <title>Demo Report • Page Mama</title>
       </Head>
-      <div className="bg-[#F8FAFC] min-h-screen font-['Inter',_'Noto_Sans_Bengali',_sans-serif] text-[#111827]">
+      <div className="bg-[#F8FAFC] min-h-screen font-['Inter',_'Noto_Sans_Bengali',_sans-serif] text-[#111827] pt-24 sm:pt-32">
         
         <Navbar />
 

@@ -12,7 +12,7 @@ export default function SampleReport() {
       <Head>
         <title>নমুনা রিপোর্ট — বাস্তব উদাহরণ | Page Mama</title>
       </Head>
-      <div className="bg-[#FFFAF5] min-h-screen text-[#0F172A] font-sans pb-20">
+      <div className="bg-[#FFFAF5] min-h-screen text-[#0F172A] font-sans pb-20 pt-24 sm:pt-32">
         <Navbar />
 
         {/* Report badge sub-bar */}

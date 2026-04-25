@@ -13,7 +13,7 @@ export default function ProDemo() {
       <Head>
         <title>প্রো রিপোর্ট — নমুনা | Page Mama</title>
       </Head>
-      <div className="bg-[#0F172A] min-h-screen text-gray-200 font-sans pb-20">
+      <div className="bg-[#0F172A] min-h-screen text-gray-200 font-sans pb-20 pt-24 sm:pt-32">
         
         <Navbar />
 

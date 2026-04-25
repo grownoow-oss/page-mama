@@ -13,7 +13,7 @@ export default function QuickCheckDemo() {
       <Head>
         <title>কুইক চেক রিপোর্ট — নমুনা | Page Mama</title>
       </Head>
-      <div className="bg-[#FFFAF5] min-h-screen text-[#0F172A] font-sans pb-20">
+      <div className="bg-[#FFFAF5] min-h-screen text-[#0F172A] font-sans pb-20 pt-24 sm:pt-32">
         <Navbar />
 
         {/* Plan badge sub-bar */}
