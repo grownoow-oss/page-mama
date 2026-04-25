@@ -34,7 +34,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-[34px] sm:text-[68px] lg:text-[84px] leading-[1.1] sm:leading-[1.02] font-black tracking-tight sm:tracking-[-2px] text-[#0F172A]"
+                className="text-[42px] sm:text-[68px] lg:text-[84px] leading-[1.1] sm:leading-[1.02] font-black tracking-tight sm:tracking-[-2px] text-[#0F172A]"
               >
                 আপনার পেজের<br />
                 <span className="text-[#FFB800] relative">
