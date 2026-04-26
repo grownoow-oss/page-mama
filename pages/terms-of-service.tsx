@@ -174,14 +174,15 @@ export default function TermsOfService() {
                 </div>
               </section>
 
-              {/* Section 6 - 9 (Brief sections) */}
-              <section className="space-y-8">
+              {/* Section 6 - 10 */}
+              <section className="space-y-10">
                 <div>
                   <h2 className="text-xl font-black text-[#1A1A2E] mb-4 flex items-center gap-3">
                     <span className="w-9 h-9 bg-[#FFF3E0] rounded-xl flex items-center justify-center text-lg shrink-0">🔒</span>
                     ৬. আপনার ডেটার মালিকানা
                   </h2>
                   <p>আপনার পেজের ডেটা, স্ক্রিনশট, এবং তথ্যের মালিক আপনি। আমরা শুধু বিশ্লেষণের জন্য ব্যবহার করি — অন্য কোনো উদ্দেশ্যে নয়।</p>
+                  <p className="mt-4">আমাদের তৈরি রিপোর্ট আপনি ব্যক্তিগত বা ব্যবসায়িক কাজে ব্যবহার করতে পারবেন। তবে রিপোর্ট পুনরায় বিক্রি বা পাবলিকলি শেয়ার করা যাবে না।</p>
                 </div>
                 
                 <div>
@@ -189,7 +190,8 @@ export default function TermsOfService() {
                     <span className="w-9 h-9 bg-[#FFF3E0] rounded-xl flex items-center justify-center text-lg shrink-0">⚡</span>
                     ৭. সার্ভিস পরিবর্তন ও বন্ধ
                   </h2>
-                  <p>আমরা যেকোনো সময় সার্ভিসের ফিচার পরিবর্তন, আপগ্রেড, বা নতুন কিছু যোগ করতে পারি। অপ্রত্যাশিত কারণে সার্ভিস বন্ধ হলে আমরা যত দ্রুত সম্ভব সমাধান করব।</p>
+                  <p>আমরা যেকোনো সময় সার্ভিসের ফিচার পরিবর্তন, আপগ্রেড, বা নতুন কিছু যোগ করতে পারি। বড় পরিবর্তনের ক্ষেত্রে আগে থেকে জানানো হবে।</p>
+                  <p className="mt-4">অপ্রত্যাশিত কারণে সার্ভিস বন্ধ হলে (সার্ভার সমস্যা, Facebook API পরিবর্তন) আমরা যত দ্রুত সম্ভব সমাধান করব। দীর্ঘমেয়াদি বন্ধের ক্ষেত্রে রিফান্ড বিবেচনা করা হবে।</p>
                 </div>
 
                 <div>
@@ -197,7 +199,8 @@ export default function TermsOfService() {
                     <span className="w-9 h-9 bg-[#FFF3E0] rounded-xl flex items-center justify-center text-lg shrink-0">⚖️</span>
                     ৮. দায়বদ্ধতার সীমা
                   </h2>
-                  <ul className="space-y-3">
+                  <p>Page Mama নিম্নলিখিত বিষয়ে দায়বদ্ধ নয়:</p>
+                  <ul className="space-y-3 mt-4">
                     <li className="flex gap-3 pl-1">
                       <span className="text-[#DC2626] font-bold">✗</span>
                       আমাদের পরামর্শ অনুসরণ করার পরেও রিচ না বাড়লে
@@ -205,6 +208,14 @@ export default function TermsOfService() {
                     <li className="flex gap-3 pl-1">
                       <span className="text-[#DC2626] font-bold">✗</span>
                       Facebook এর নীতি পরিবর্তনের কারণে পেজের ক্ষতি হলে
+                    </li>
+                    <li className="flex gap-3 pl-1">
+                      <span className="text-[#DC2626] font-bold">✗</span>
+                      আপনার পেজের কনটেন্টের মান বা বৈধতার জন্য
+                    </li>
+                    <li className="flex gap-3 pl-1">
+                      <span className="text-[#DC2626] font-bold">✗</span>
+                      তৃতীয় পক্ষের টুলের (Apify, OpenAI) সমস্যার জন্য
                     </li>
                   </ul>
                 </div>
@@ -214,7 +225,15 @@ export default function TermsOfService() {
                     <span className="w-9 h-9 bg-[#FFF3E0] rounded-xl flex items-center justify-center text-lg shrink-0">📋</span>
                     ৯. Facebook এর সাথে সম্পর্ক
                   </h2>
-                  <p>Page Mama, Meta Platforms Inc. (Facebook) এর সাথে সম্পর্কিত নয়। আমরা একটি স্বাধীন বাংলাদেশি সার্ভিস।</p>
+                  <p>Page Mama, Meta Platforms Inc. (Facebook) এর সাথে সম্পর্কিত নয়, অনুমোদিত নয়, বা অংশীদার নয়। আমরা স্বাধীনভাবে পরিচালিত একটি বাংলাদেশি সার্ভিস।</p>
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-black text-[#1A1A2E] mb-4 flex items-center gap-3">
+                    <span className="w-9 h-9 bg-[#FFF3E0] rounded-xl flex items-center justify-center text-lg shrink-0">🔄</span>
+                    ১০. শর্তাবলী পরিবর্তন
+                  </h2>
+                  <p>এই শর্তাবলী আপডেট হলে সাইটে নতুন তারিখ দিয়ে জানানো হবে। সার্ভিস ব্যবহার চালিয়ে গেলে আপনি নতুন শর্ত মেনে নিয়েছেন বলে গণ্য হবে।</p>
                 </div>
               </section>
 
