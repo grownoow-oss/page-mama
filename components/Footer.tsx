@@ -29,9 +29,9 @@ export default function Footer() {
             <h4 className="text-[#0F172A] font-bold mb-4 sm:mb-6 uppercase tracking-wider text-xs sm:text-sm">সাপোর্ট</h4>
             <ul className="space-y-3 sm:space-y-4 text-sm text-[#64748B] font-medium">
               <li><Link href="/#faq" className="hover:text-[#FFB800] transition-colors">প্রায়শই জিজ্ঞাসিত প্রশ্ন</Link></li>
-              <li><a href="#" className="hover:text-[#FFB800] transition-colors">প্রাইভেসি পলিসি</a></li>
-              <li><a href="#" className="hover:text-[#FFB800] transition-colors">টার্মস অফ সার্ভিস</a></li>
-              <li><a href="#" className="hover:text-[#FFB800] transition-colors">যোগাযোগ করুন</a></li>
+              <li><Link href="/privacy-policy" className="hover:text-[#FFB800] transition-colors">প্রাইভেসি পলিসি</Link></li>
+              <li><Link href="/terms-of-service" className="hover:text-[#FFB800] transition-colors">টার্মস অফ সার্ভিস</Link></li>
+              <li><Link href="/#contact" className="hover:text-[#FFB800] transition-colors">যোগাযোগ করুন</Link></li>
             </ul>
           </div>
         </div>
