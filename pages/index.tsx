@@ -9,9 +9,8 @@ import Hero from '../components/Hero'
 import TrustBar from '../components/TrustBar'
 import HowItWorks from '../components/HowItWorks'
 import KeyBenefits from '../components/KeyBenefits'
-import SocialProof from '../components/SocialProof'
-import CaseStudy from '../components/CaseStudy'
 import Pricing from '../components/Pricing'
+import CaseStudy from '../components/CaseStudy'
 import PostPaymentFlow from '../components/PostPaymentFlow'
 import FAQ from '../components/FAQ'
 import CTABottom from '../components/CTABottom'
@@ -40,28 +39,10 @@ export default function Home() {
     });
     
     // Number counters
-    function animateCounter(id: string, target: number, suffix = '') {
-      const element = document.getElementById(id);
-      if (!element) return;
-      let current = 0;
-      const increment = target / 45;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          element.textContent = target + suffix;
-          clearInterval(timer);
-        } else {
-          element.textContent = Math.floor(current) + suffix;
-        }
-      }, 40);
-    }
+
     
-    setTimeout(() => {
-      animateCounter('counter1', 2847);
-      animateCounter('counter2', 31, '%');
-      animateCounter('counter3', 4.96);
-      animateCounter('counter4', 184);
-    }, 800);
+    // Analysis simulation logic removed from here as counters are replaced by static stats in TrustBar
+
     
     // Start Analysis Event Listener
     const handleStartAnalysis = () => {
@@ -122,7 +103,6 @@ export default function Home() {
         <HowItWorks />
         <KeyBenefits />
         <CaseStudy />
-        <SocialProof />
         <Pricing />
         <PostPaymentFlow />
         <FAQ />

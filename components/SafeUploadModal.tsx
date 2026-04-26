@@ -212,7 +212,7 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
                     <div className="mt-6 flex items-start gap-3 bg-emerald-50 border border-emerald-100 p-4 rounded-xl">
                       <ShieldCheck className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                       <div className="text-sm text-emerald-800 font-medium leading-relaxed">
-                        চিন্তা করবেন না, আমরা শুধু এই স্ক্রিনশটগুলো দেখব। আপনার পেজে কখনো লগইন করব না।
+                        চিন্তা করবেন না, আমরা শুধু পেজ লিংক ব্যবহার করি। আপনার পেজে কখনো লগইন করব না।
                       </div>
                     </div>
 
@@ -328,7 +328,7 @@ export default function SafeUploadModal({ isOpen, onClose }: SafeUploadModalProp
                     
                     <div className="mt-5 flex items-center justify-center gap-1.5 text-xs text-[#64748B] font-bold">
                       <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                      আপনার ডেটা সম্পূর্ণ নিরাপদ। আমরা কখনো পেজে লগইন করি না।
+                      আপনার ডেটা সম্পূর্ণ নিরাপদ। শুধু পেজ লিংক দিন, আমরা কখনো পেজে লগইন করি না।
                     </div>
                   </motion.div>
                 )}

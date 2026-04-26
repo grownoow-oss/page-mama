@@ -1,11 +1,11 @@
-import { UploadCloud, BrainCircuit, ListChecks } from 'lucide-react';
+import { Link2, BrainCircuit, ListChecks } from 'lucide-react';
 
 export default function HowItWorks() {
   const steps = [
     {
-      icon: UploadCloud,
-      title: '১. আপলোড',
-      desc: 'স্ক্রিনশট বা PDF আপলোড করুন। আমরা কখনো আপনার পেজে লগইন করি না।',
+      icon: Link2,
+      title: '১. লিংক দিন',
+      desc: 'শুধু আপনার পেজের লিংক দিন — ২৫ সেকেন্ডে পূর্ণ রিপোর্ট। আমরা কখনো আপনার পেজে লগইন করি না।',
     },
     {
       icon: BrainCircuit,

@@ -259,7 +259,7 @@ export default function SampleReport() {
               <ArrowRight className="w-5 h-5" />
             </button>
             <div className="text-sm text-gray-500 font-bold mt-4">
-              ১৫ দিনের মানি-ব্যাক গ্যারান্টি • কোনো কার্ড লাগবে না
+              ১০০% সিকিউর পেমেন্ট • কোনো কার্ড লাগবে না
             </div>
           </div>
           

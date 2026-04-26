@@ -165,10 +165,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                       </div>
                     ))}
                   </div>
-                  <div className="mt-4 pt-3 border-t border-gray-200 flex items-center gap-2 text-xs text-emerald-600 font-semibold">
-                    <ShieldCheck className="w-4 h-4" />
-                    <span>১৫ দিনের মানি-ব্যাক গ্যারান্টি</span>
-                  </div>
+
                 </div>
 
                 <h2 className="text-base font-bold text-gray-900 mb-4">আপনার তথ্য দিন</h2>
@@ -308,7 +305,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
                 )}
               </button>
               <p className="text-center mt-2.5 text-xs text-gray-400 font-medium">
-                ১০০% সিকিউর • ১৫ দিনের মানি-ব্যাক গ্যারান্টি
+                ১০০% সিকিউর
               </p>
             </div>
           )}

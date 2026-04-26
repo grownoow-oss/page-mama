@@ -1,45 +1,55 @@
+import { motion } from 'framer-motion'
+
+const marqueeItems = [
+  "১২০+ পেজ অ্যানালাইজড",
+  "৪.৮ ইউজার রেটিং (১২০+ রিভিউ)",
+  "✍️ ভাইরাল কন্টেন্ট আইডিয়া",
+  "🛡️ স্প্যামি শব্দ ডিটেকশন",
+  "📊 গ্রোথ স্কোর জানুন",
+  "🚀 রিচ ড্রপ ডিটেক্ট করুন",
+  "🧠 AI ইনসাইট পান",
+  "🔍 কম্পিটিটর অ্যানালাইসিস",
+  "⏰ বেস্ট পোস্টিং টাইম",
+  "📈 অ্যাকশন প্ল্যান পান"
+];
+
 export default function TrustBar() {
   return (
-    <div className="relative border-y border-gray-100 bg-[#FDFDFD] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 md:gap-8 text-center divide-gray-100/50 md:divide-x">
-          <div className="px-6 hover:translate-y-[-4px] transition-all duration-500">
-            <div className="flex justify-center items-baseline gap-1 mb-3">
-              <div id="counter1" className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tighter">2847</div>
-              <span className="text-[#FFB800] text-2xl font-black">+</span>
-            </div>
-            <div className="text-[11px] font-black text-[#94A3B8] uppercase tracking-[0.2em]">পেজ অ্যানালাইজড</div>
-          </div>
-          
-          <div className="px-6 hover:translate-y-[-4px] transition-all duration-500 border-l border-gray-100/50 md:border-none">
-            <div className="flex justify-center items-baseline gap-1 mb-3">
-              <div id="counter2" className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tighter">31</div>
-              <span className="text-[#FFB800] text-2xl font-black">%</span>
-            </div>
-            <div className="text-[11px] font-black text-[#94A3B8] uppercase tracking-[0.2em]">গড় রিচ বৃদ্ধি</div>
-          </div>
-          
-          <div className="px-6 hover:translate-y-[-4px] transition-all duration-500">
-            <div className="flex justify-center items-center gap-1 mb-4">
-              <div id="counter3" className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tighter">4.9</div>
-              <div className="flex flex-col items-start leading-none ml-2">
-                <div className="flex text-[#FFB800] text-xs">★★★★★</div>
-                <div className="text-[10px] font-bold text-[#94A3B8] mt-1">REVIEWS</div>
+    <div className="relative border-y border-gray-100 bg-[#FDFDFD] py-6 md:py-12 overflow-hidden">
+      {/* Scrolling Marquee Section */}
+      <div className="relative py-1">
+        {/* Gradient overlays for smooth fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-64 bg-gradient-to-r from-[#FDFDFD] via-[#FDFDFD]/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-64 bg-gradient-to-l from-[#FDFDFD] via-[#FDFDFD]/80 to-transparent z-10 pointer-events-none" />
+        
+        <div className="flex overflow-hidden">
+          <motion.div 
+            className="flex whitespace-nowrap gap-3 md:gap-6 py-4 px-2"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ 
+              duration: 40, 
+              repeat: Infinity, 
+              ease: "linear" 
+            }}
+          >
+            {[...marqueeItems, ...marqueeItems].map((item, i) => (
+              <div 
+                key={i} 
+                className={`flex items-center gap-2.5 px-5 py-3 md:px-10 md:py-5 rounded-xl md:rounded-2xl bg-white border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:border-[#FF5E00]/30 hover:shadow-[0_8px_30px_rgb(255,94,0,0.08)] hover:-translate-y-0.5 md:hover:-translate-y-1 transition-all duration-300 cursor-default group ${
+                  item.includes('১২০+') || item.includes('৪.৮') ? 'border-[#FF5E00]/20' : ''
+                }`}
+              >
+                <span className={`text-[15px] md:text-xl font-bold group-hover:text-[#0F172A] ${
+                  item.includes('১২০+') || item.includes('৪.৮') ? 'text-[#FF5E00]' : 'text-[#334155]'
+                }`}>
+                  {item}
+                </span>
               </div>
-            </div>
-            <div className="text-[11px] font-black text-[#94A3B8] uppercase tracking-[0.2em]">ইউজার রেটিং</div>
-          </div>
-          
-          <div className="px-6 hover:translate-y-[-4px] transition-all duration-500 border-l border-gray-100/50 md:border-none">
-            <div className="flex justify-center items-baseline gap-1 mb-3">
-              <div id="counter4" className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tighter">184</div>
-              <span className="text-[#FFB800] text-2xl font-black">+</span>
-            </div>
-            <div className="text-[11px] font-black text-[#94A3B8] uppercase tracking-[0.2em]">বাংলাদেশি পেজ</div>
-          </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>
+
   );
 }
-

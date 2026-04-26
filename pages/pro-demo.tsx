@@ -322,7 +322,7 @@ export default function ProDemo() {
               এখনই প্রো শুরু করুন — ৫৯৯ টাকায়
             </button>
             <div className="text-gray-500 text-xs font-medium flex items-center justify-center gap-1.5 mt-4">
-              <ShieldAlert className="w-3 h-3 text-gray-400" /> ১৫ দিনের মানি-ব্যাক গ্যারান্টি
+              <ShieldAlert className="w-3 h-3 text-gray-400" /> ১০০% সিকিউর পেমেন্ট
             </div>
           </div>
 

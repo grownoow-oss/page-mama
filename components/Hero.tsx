@@ -26,7 +26,7 @@ export default function Hero() {
               className="flex w-fit mx-auto lg:mx-0 items-center gap-x-2.5 bg-white border border-gray-100 px-5 py-2 rounded-2xl mb-6 sm:mb-8 shadow-sm"
             >
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
-              <span className="text-[13px] font-black text-[#334155] tracking-tight uppercase">২০২৬-এর <span className="text-[#FFB800]">#১</span> পেজ হেলথ টুল</span>
+              <span className="text-[13px] font-black text-[#334155] tracking-tight uppercase">বাংলাদেশে তৈরি, <span className="text-[#FFB800]">বাংলাদেশি পেজের</span> জন্য</span>
             </motion.div>
 
             <div className="relative inline-block text-center lg:text-left mb-4 sm:mb-6 mt-2 sm:mt-0">
@@ -71,7 +71,7 @@ export default function Hero() {
 
                 <div className="relative z-10">
                   <div className="mb-6 sm:mb-8 text-center sm:text-left">
-                    <p className="text-black text-[15px] sm:text-[18px] font-black tracking-tight">শুধু পেজ লিংক দিন — ২৫ সেকেন্ডে রিপোর্ট</p>
+                    <p className="text-black text-[15px] sm:text-[18px] font-black tracking-tight">শুধু পেজ লিংক দিন। আমরা কখনো আপনার পেজে লগইন করি না।</p>
                   </div>
 
                   {/* Minimal URL Input Box (Modal Trigger) */}

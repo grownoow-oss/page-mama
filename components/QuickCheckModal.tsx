@@ -96,8 +96,9 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
 
               {/* Description */}
               <div className="text-[#64748B] text-sm mb-6 leading-relaxed font-medium">
-                শুধু আপনার পেজের লিংক দিন। আমরা শুধু <span className="font-bold text-[#0F172A]">পাবলিক পোস্ট</span> দেখব।
+                শুধু পেজ লিংক দিন। আমরা কখনো আপনার পেজে লগইন করি না। আমরা শুধু <span className="font-bold text-[#0F172A]">পাবলিক পোস্ট</span> দেখব।
               </div>
+
 
               {/* URL Input */}
               <div className="mb-5">

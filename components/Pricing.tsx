@@ -205,7 +205,7 @@ export default function Pricing() {
         </div>
         
         <div className="text-center mt-12 text-[#94A3B8] font-medium text-sm">
-          ১০০% সিকিউর পেমেন্ট • যেকোনো সময় ক্যান্সেল করুন • ১৪ দিনের মানি-ব্যাক গ্যারান্টি
+          ১০০% সিকিউর পেমেন্ট • যেকোনো সময় ক্যান্সেল করুন
         </div>
       </div>
       
