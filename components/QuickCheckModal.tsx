@@ -72,7 +72,7 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
             className="relative w-full max-w-[480px] bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col"
           >
             {/* Top accent line */}
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gray-900" />
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#FF5E00]" />
 
             <div className="p-8 relative">
               <button 
@@ -84,29 +84,32 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
               </button>
 
               {/* Header */}
-              <div className="flex items-center gap-x-3 mb-6 pr-8">
-                <div className="w-12 h-12 bg-gray-900 text-white rounded-2xl flex items-center justify-center flex-shrink-0">
+              <div className="flex items-center gap-x-4 mb-8 pr-8">
+                <div className="w-12 h-12 bg-gray-50 text-[#FF5E00] rounded-2xl flex items-center justify-center flex-shrink-0 border border-[#FF5E00]/10 shadow-sm">
                   <LinkIcon className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-extrabold text-2xl text-[#0F172A]">দ্রুত চেক</div>
-                  <div className="text-emerald-600 text-sm font-bold">মাত্র ২৫ সেকেন্ডে</div>
+                  <div className="font-extrabold text-2xl text-[#0F172A] tracking-tight">দ্রুত চেক</div>
+                  <div className="text-emerald-600 text-sm font-bold flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                    মাত্র ২৫ সেকেন্ডে
+                  </div>
                 </div>
               </div>
 
               {/* Description */}
               <div className="text-[#64748B] text-sm mb-6 leading-relaxed font-medium">
-                শুধু পেজ লিংক দিন। আমরা কখনো আপনার পেজে লগইন করি না। আমরা শুধু <span className="font-bold text-[#0F172A]">পাবলিক পোস্ট</span> দেখব।
+                শুধু পেজ লিংক দিন। আমরা শুধু <span className="font-bold text-[#0F172A]">পাবলিক পোস্ট</span> দেখব।
               </div>
 
 
               {/* URL Input */}
-              <div className="mb-5">
-                <label className="block text-sm font-bold text-[#0F172A] mb-2">পেজের লিংক দিন</label>
+              <div className="mb-6">
+                <label className="block text-sm font-bold text-[#0F172A] mb-2.5">পেজের লিংক দিন</label>
                 
                 <div className="relative">
                   <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
-                    <Facebook className="w-5 h-5" />
+                    <LinkIcon className="w-4 h-4" />
                   </div>
                   
                   <input 
@@ -118,15 +121,16 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
                     }}
                     onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
                     disabled={isSubmitting}
-                    placeholder="https://www.facebook.com/yourpage"
-                    className={`w-full pl-12 pr-5 py-4 border ${error ? 'border-red-400 focus:border-red-500' : 'border-gray-200 focus:border-[#FFB800]'} rounded-2xl text-sm font-medium placeholder:text-gray-400 focus:outline-none transition-colors bg-gray-50/50 focus:bg-white`}
+                    placeholder="facebook.com/yourpage"
+                    className={`w-full h-[48px] pl-11 pr-5 border ${error ? 'border-red-400 focus:border-red-500' : 'border-gray-200 focus:border-[#FF5E00]/30 focus:ring-4 focus:ring-[#FF5E00]/5'} rounded-xl text-sm font-medium placeholder:text-gray-400 focus:outline-none transition-all bg-[#F8FAFC] focus:bg-white`}
                   />
                 </div>
                 
                 {error ? (
                   <div className="text-xs text-red-500 mt-2 px-1 font-bold">{error}</div>
                 ) : (
-                  <div className="text-xs text-[#64748B] mt-2 px-1 font-medium">
+                  <div className="text-[11px] text-[#64748B] mt-2.5 px-1 font-medium flex items-center gap-1.5">
+                    <div className="w-1 h-1 bg-gray-300 rounded-full" />
                     উদাহরণ: facebook.com/DhakaFashionHub
                   </div>
                 )}
@@ -136,10 +140,10 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
               <button 
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className={`mt-6 w-full py-4 text-white font-bold rounded-2xl text-lg transition-all flex items-center justify-center gap-2 ${
+                className={`mt-6 w-full h-[52px] text-white font-bold rounded-xl text-base transition-all flex items-center justify-center gap-2 ${
                   isSubmitting 
                     ? 'bg-gray-800 cursor-wait' 
-                    : 'bg-gray-900 hover:bg-black active:scale-[0.98] shadow-lg shadow-gray-900/20'
+                    : 'bg-[#FF5E00] hover:bg-[#E65500] active:scale-[0.98] shadow-lg shadow-[#FF5E00]/20'
                 }`}
               >
                 {isSubmitting ? (

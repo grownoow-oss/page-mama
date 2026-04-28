@@ -51,7 +51,7 @@ export default function Hero() {
               className="mb-6 sm:mb-12 space-y-3 sm:space-y-4"
             >
               <h2 className="text-[19px] sm:text-[28px] font-bold text-[#334155] leading-[1.4] sm:leading-snug">
-                <span className="text-[#0082FB]">Meta</span> দেখায় রিপোর্ট,<br className="sm:hidden" /> <span className="inline-flex items-center px-2 py-0.5 rounded-lg border border-[#0F172A]/10 bg-white/50 shadow-sm mx-1.5 translate-y-[1px]"><Logo textOnly size="inline" /></span> দেয় অ্যাকশন।
+                <span className="text-[#0082FB]">মেটা</span> দেখায় রিপোর্ট,<br className="sm:hidden" /> <span className="inline-flex items-center px-2 py-0.5 rounded-lg border border-[#0F172A]/10 bg-white/50 shadow-sm mx-1.5 translate-y-[1px]"><Logo textOnly size="inline" /></span> দেয় অ্যাকশন।
               </h2>
               <p className="text-[15px] sm:text-[20px] text-gray-500 font-medium leading-relaxed px-4 sm:px-0">
                 ৩০ সেকেন্ডে জানুন + ঠিক কী করবেন — <span className="text-[#0F172A] font-bold">স্পষ্ট অ্যাকশন প্ল্যান</span> সহ।
@@ -63,34 +63,35 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="max-w-[550px] mx-auto lg:mx-0 px-2 sm:px-0"
+              className="max-w-[600px] mx-auto lg:mx-0 px-2 sm:px-0"
             >
-              <div className="w-full bg-[#FFB800] rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 shadow-[0_20px_50px_rgba(255,184,0,0.15)] relative overflow-hidden group">
-                {/* Glow Effect */}
-                <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-[60px] -mr-20 -mt-20 pointer-events-none transition-transform group-hover:scale-110" />
-
+              <div className="w-full bg-white border border-gray-100 rounded-[20px] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group">
                 <div className="relative z-10">
-                  <div className="mb-6 sm:mb-8 text-center sm:text-left">
-                    <p className="text-black text-[15px] sm:text-[18px] font-black tracking-tight">শুধু পেজ লিংক দিন। আমরা কখনো আপনার পেজে লগইন করি না।</p>
+                  <div className="mb-6 text-center sm:text-left">
+                    <p className="text-[#0F172A] text-[18px] sm:text-[22px] font-bold tracking-tight leading-tight">
+                      শুধু পেজ লিংক দিন।
+                    </p>
                   </div>
 
-                  {/* Minimal URL Input Box (Modal Trigger) */}
-                  <div className="flex justify-center sm:justify-start">
+                  {/* Premium URL Input Box */}
+                  <div className="flex flex-col sm:flex-row items-center gap-3">
+                    <div className="relative flex-1 w-full">
+                      <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+                        <Link2 className="w-4 h-4" />
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="আপনার পেজ লিংক দিন (facebook.com/yourpage)"
+                        className="w-full h-[48px] pl-11 pr-4 bg-[#F8FAFC] border border-gray-200 rounded-xl text-[14px] font-medium text-[#0F172A] focus:outline-none focus:border-[#FF5E00]/30 focus:ring-4 focus:ring-[#FF5E00]/5 transition-all placeholder:text-gray-400 cursor-pointer"
+                        onClick={() => window.dispatchEvent(new Event('open-quick-check'))}
+                        readOnly
+                      />
+                    </div>
                     <button
                       onClick={() => window.dispatchEvent(new Event('open-quick-check'))}
-                      className="relative flex items-center w-full sm:w-[88%] group/trigger active:scale-[0.98] transition-transform"
+                      className="h-[48px] px-8 bg-[#FF5E00] hover:bg-[#E65500] text-white font-bold text-[15px] rounded-xl transition-all shadow-lg shadow-[#FF5E00]/10 hover:shadow-[#FF5E00]/20 active:scale-[0.98] whitespace-nowrap w-full sm:w-auto flex items-center justify-center"
                     >
-                      <div className="relative w-full">
-                        <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 group-hover/trigger:text-[#FF5E00] transition-colors">
-                          <Link2 className="w-4 h-4" />
-                        </div>
-                        <div className="w-full h-[46px] sm:h-[48px] pl-10 pr-[105px] sm:pr-[115px] bg-white border border-[#E2E8F0] rounded-[12px] text-[14px] font-medium text-gray-400 flex items-center shadow-sm group-hover/trigger:border-[#FF5E00]/30 transition-all">
-                          পেজ লিংক দিন
-                        </div>
-                        <div className="absolute right-1.5 top-1/2 -translate-y-1/2 h-[34px] sm:h-[36px] px-4 sm:px-5 bg-[#FF5E00] group-hover/trigger:bg-[#E65500] text-white font-black text-[12px] sm:text-[13px] rounded-[9px] flex items-center transition-all shadow-md">
-                          রিপোর্ট দেখুন
-                        </div>
-                      </div>
+                      রিপোর্ট দেখুন
                     </button>
                   </div>
                 </div>
