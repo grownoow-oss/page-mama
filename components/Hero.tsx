@@ -94,12 +94,6 @@ export default function Hero() {
                       রিপোর্ট দেখুন
                     </button>
                   </div>
-                  <div className="mt-4 flex items-center justify-center lg:justify-start gap-2">
-                    <Target className="w-3.5 h-3.5 text-[#FF5E00]" />
-                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest italic">
-                      ২০+ পেজের বাস্তব তথ্য বিশ্লেষণ করা হয়েছে
-                    </p>
-                  </div>
                 </div>
               </div>
             </motion.div>
@@ -143,17 +137,17 @@ export default function Hero() {
               className="relative"
             >
               {/* Analysis Card */}
-              <div className="bg-white rounded-[32px] sm:rounded-[40px] p-1.5 sm:p-2 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-gray-100">
-                <div className="bg-white rounded-[28px] sm:rounded-[34px] p-6 sm:p-10 text-[#0F172A] relative overflow-hidden min-h-[420px] sm:min-h-[500px] flex flex-col justify-between border border-gray-50">
+              <div className="bg-[#0F172A] rounded-[32px] sm:rounded-[40px] p-1.5 sm:p-2 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.3)] border border-white/10">
+                <div className="bg-[#0F172A] rounded-[28px] sm:rounded-[34px] p-6 sm:p-10 text-white relative overflow-hidden min-h-[420px] sm:min-h-[500px] flex flex-col justify-between border border-white/5">
                   {/* Subtle Glow */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF5E00]/5 rounded-full blur-[80px] pointer-events-none -mr-32 -mt-32" />
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF5E00]/10 rounded-full blur-[80px] pointer-events-none -mr-32 -mt-32" />
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full relative z-10">
                     {/* Metrics Section */}
                     <div className="flex flex-col justify-between">
                       <div>
                         <div className="flex items-center gap-2.5 mb-6 sm:mb-8">
-                          <div className="px-3 py-1 bg-emerald-50 text-emerald-600 text-[9px] sm:text-[10px] font-bold rounded-full flex items-center gap-1.5 border border-emerald-100">
+                          <div className="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-[9px] sm:text-[10px] font-bold rounded-full flex items-center gap-1.5 border border-emerald-500/20">
                             <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
                             লাইভ অ্যানালাইসিস
                           </div>
@@ -162,16 +156,16 @@ export default function Hero() {
                         <div className="mb-8 sm:mb-10 relative">
                           <div className="flex flex-col gap-3">
                             <div className="flex items-center gap-3">
-                               <div className="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.2)]" />
-                               <span className="text-lg font-bold text-[#0F172A] tracking-tight">অ্যালগরিদম রিস্ক (লাল জোন)</span>
+                               <div className="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.5)]" />
+                               <span className="text-lg font-bold text-white tracking-tight">অ্যালগরিদম রিস্ক (লাল জোন)</span>
                             </div>
                             <div className="flex items-center gap-3">
-                               <div className="w-4 h-4 rounded-full bg-slate-400" />
-                               <span className="text-lg font-bold text-gray-500 tracking-tight">উন্নতির সুযোগ (ধূসর জোন)</span>
+                               <div className="w-4 h-4 rounded-full bg-slate-500" />
+                               <span className="text-lg font-bold text-gray-400 tracking-tight">উন্নতির সুযোগ (ধূসর জোন)</span>
                             </div>
                             <div className="flex items-center gap-3">
-                               <div className="w-4 h-4 rounded-full bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.2)]" />
-                               <span className="text-lg font-bold text-emerald-600 tracking-tight">পজিティブ পয়েন্ট (সবুজ জোন)</span>
+                               <div className="w-4 h-4 rounded-full bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.3)]" />
+                               <span className="text-lg font-bold text-emerald-400 tracking-tight">পজিটিভ পয়েন্ট (সবুজ জোন)</span>
                             </div>
                           </div>
                         </div>
@@ -180,9 +174,9 @@ export default function Hero() {
                           <div>
                             <div className="flex justify-between items-center text-[10px] sm:text-[11px] font-bold mb-2 tracking-wide">
                               <span className="text-gray-400 uppercase tracking-widest">রিচ পটেনশিয়াল (আগামী ৩০ দিন)</span>
-                              <span className="text-emerald-600">+৩৮%</span>
+                              <span className="text-emerald-400">+৩৮%</span>
                             </div>
-                            <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                            <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
                               <motion.div
                                 initial={{ width: 0 }}
                                 animate={{ width: '92%' }}
@@ -191,16 +185,16 @@ export default function Hero() {
                               />
                             </div>
                           </div>
-                          <div className="pt-4 border-t border-gray-100">
-                            <div className="text-[9px] sm:text-[10px] text-gray-400 font-bold tracking-widest uppercase mb-1">অর্গানিক গ্রোথ ট্র্যাকিং</div>
-                            <div className="text-2xl sm:text-3xl font-black text-[#0F172A]">লাইভ এনালাইসিস</div>
+                          <div className="pt-4 border-t border-white/5">
+                            <div className="text-[9px] sm:text-[10px] text-gray-500 font-bold tracking-widest uppercase mb-1">অর্গানিক গ্রোথ ট্র্যাকিং</div>
+                            <div className="text-2xl sm:text-3xl font-black text-white">লাইভ এনালাইসিস</div>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     {/* Action Plan Section */}
-                    <div className="bg-gray-50 rounded-[24px] sm:rounded-[28px] p-5 sm:p-6 border border-gray-100 flex flex-col">
+                    <div className="bg-white/5 rounded-[24px] sm:rounded-[28px] p-5 sm:p-6 border border-white/10 flex flex-col">
                       <div className="flex items-center justify-between mb-5 sm:mb-6">
                         <div className="text-[10px] sm:text-[11px] font-black text-[#FF5E00] tracking-widest uppercase">অ্যাকশন প্ল্যান</div>
                         <Sparkles className="w-4 h-4 text-[#FF5E00]" />
@@ -219,23 +213,23 @@ export default function Hero() {
                             transition={{ delay: 1.2 + (i * 0.1) }}
                             className="flex items-center gap-3 group"
                           >
-                            <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full border ${item.status === 'urgent' ? 'border-[#FF5E00] bg-[#FF5E00]/20' : 'border-gray-200'} flex items-center justify-center shrink-0`}>
+                            <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full border ${item.status === 'urgent' ? 'border-[#FF5E00] bg-[#FF5E00]/20' : 'border-white/20'} flex items-center justify-center shrink-0`}>
                               {item.status === 'urgent' ? <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-[#FF5E00] rounded-full" /> : null}
                             </div>
-                            <span className={`text-[12px] sm:text-[13px] font-bold ${item.status === 'urgent' ? 'text-[#0F172A]' : 'text-gray-500'}`}>{item.text}</span>
+                            <span className={`text-[12px] sm:text-[13px] font-bold ${item.status === 'urgent' ? 'text-white' : 'text-gray-400'}`}>{item.text}</span>
                           </motion.div>
                         ))}
                       </div>
 
-                      <div className="mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-gray-200/50">
-                        <div className="bg-white text-[#0F172A] text-[11px] sm:text-[12px] font-black py-2.5 sm:py-3 px-4 rounded-xl flex items-center justify-between group cursor-pointer hover:bg-[#FF5E00] hover:text-white transition-colors border border-gray-100 shadow-sm">
+                      <div className="mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-white/5">
+                        <div className="bg-white text-[#0F172A] text-[11px] sm:text-[12px] font-black py-2.5 sm:py-3 px-4 rounded-xl flex items-center justify-between group cursor-pointer hover:bg-[#FF5E00] hover:text-white transition-colors">
                           অ্যাকশন গাইড দেখুন
                           <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="mt-6 text-center text-[9px] sm:text-[10px] text-gray-400">*(বাস্তব ইউজারদের গড় ফলাফল)</div>
+                  <div className="mt-6 text-center text-[9px] sm:text-[10px] text-gray-500/50">*(বাস্তব ইউজারদের গড় ফলাফল)</div>
                 </div>
               </div>
 
