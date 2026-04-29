@@ -85,30 +85,30 @@ export default function CaseStudy() {
               <div className="absolute inset-0 bg-gradient-to-tr from-[#FF5E00]/10 to-transparent blur-3xl -z-10 rounded-full scale-110 opacity-50 transition-opacity group-hover:opacity-100" />
               
               <div className="bg-white rounded-[2.5rem] p-3 shadow-2xl shadow-black/5 border border-gray-100 max-w-sm mx-auto transform rotate-1 transition-transform group-hover:rotate-0 duration-500">
-                <div className="bg-[#0F172A] rounded-[2rem] p-6 text-white min-h-[380px] flex flex-col">
+                <div className="bg-gray-50 rounded-[2rem] p-6 text-gray-900 min-h-[380px] flex flex-col border border-gray-100">
                   {/* Post Header */}
-                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/5">
-                    <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center overflow-hidden border border-white/10">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200/50">
+                    <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden border border-gray-100">
                       <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="User Profile" className="w-full h-full object-cover" />
                     </div>
                     <div>
-                      <div className="font-bold text-sm">Dhaka Fashion Hub</div>
-                      <div className="text-[10px] text-gray-500 font-medium">Sponsored • 14 days ago</div>
+                      <div className="font-bold text-sm text-gray-900">Dhaka Fashion Hub</div>
+                      <div className="text-[10px] text-gray-500 font-bold uppercase">Sponsored • 14 days ago</div>
                     </div>
                   </div>
 
                   {/* Post Content Skeleton */}
                   <div className="space-y-3 flex-1">
-                    <div className="h-3 bg-white/10 rounded-full w-4/5" />
-                    <div className="h-3 bg-white/10 rounded-full w-2/3" />
+                    <div className="h-3 bg-gray-200 rounded-full w-4/5" />
+                    <div className="h-3 bg-gray-200 rounded-full w-2/3" />
                     
-                    <div className="mt-6 aspect-square bg-gradient-to-br from-white/5 to-white/0 rounded-2xl border border-white/5 flex items-center justify-center text-white/20">
+                    <div className="mt-6 aspect-square bg-white rounded-2xl border border-gray-100 flex items-center justify-center text-gray-200 shadow-sm">
                       <CheckCircle2 className="w-16 h-16" />
                     </div>
                   </div>
 
                   {/* Post Stats */}
-                  <div className="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                  <div className="mt-6 pt-4 border-t border-gray-200/50 flex justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-wider">
                     <span>12k Likes</span>
                     <span>430 Comments</span>
                   </div>

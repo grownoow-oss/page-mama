@@ -55,7 +55,7 @@ export default function SampleReport() {
 
       <Navbar />
 
-      <main className="pt-24 pb-20 px-4">
+      <main className="pt-32 sm:pt-40 pb-20 px-4">
         <div className="max-w-4xl mx-auto">
           
           {/* Header & Theme Toggle */}
@@ -88,7 +88,7 @@ export default function SampleReport() {
           </div>
 
           {/* Tab System */}
-          <div className={`p-1.5 rounded-2xl mb-12 flex flex-wrap gap-2 sticky top-[80px] z-30 shadow-lg backdrop-blur-md ${
+          <div className={`p-1.5 rounded-2xl mb-12 flex flex-wrap gap-2 sticky top-[100px] sm:top-[120px] z-30 shadow-lg backdrop-blur-md ${
             theme === 'dark' ? 'bg-slate-900/80 border border-slate-800' : 'bg-white/80 border border-slate-100'
           }`}>
             {[

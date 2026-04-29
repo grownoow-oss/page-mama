@@ -13,11 +13,11 @@ export default function QuickCheckDemo() {
       <Head>
         <title>কুইক চেক রিপোর্ট — নমুনা | Page Mama</title>
       </Head>
-      <div className="bg-[#FFFAF5] min-h-screen text-[#0F172A] font-sans pb-20 pt-24 sm:pt-32">
+      <div className="bg-[#FFFAF5] min-h-screen text-[#0F172A] font-sans pb-20 pt-32 sm:pt-40">
         <Navbar />
 
         {/* Plan badge sub-bar */}
-        <div className="sticky top-[76px] z-40 bg-white border-b border-gray-100">
+        <div className="sticky top-[100px] sm:top-[120px] z-40 bg-white border-b border-gray-100">
           <div className="max-w-4xl mx-auto px-4 h-12 flex items-center gap-3">
             <span className="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
               <Zap className="w-3 h-3" /> Quick Check

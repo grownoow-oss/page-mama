@@ -54,12 +54,12 @@ export default function DemoReport() {
       <Head>
         <title>নমুনা রিপোর্ট • পেজ মামা</title>
       </Head>
-      <div className="bg-[#F8FAFC] min-h-screen font-['Inter',_'Noto_Sans_Bengali',_sans-serif] text-[#111827] pt-24 sm:pt-32">
+      <div className="bg-[#F8FAFC] min-h-screen font-['Inter',_'Noto_Sans_Bengali',_sans-serif] text-[#111827] pt-32 sm:pt-40">
         
         <Navbar />
 
         {/* Demo top bar */}
-        <div className="sticky top-[80px] z-40 bg-white border-b border-gray-100 shadow-sm">
+        <div className="sticky top-[100px] sm:top-[120px] z-40 bg-white border-b border-gray-100 shadow-sm">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
             <div className="flex items-center gap-x-2">
               <div className="bg-orange-50 text-[#FF5E00] text-[10px] sm:text-xs font-bold px-2 py-1 rounded-lg tracking-wider">নমুনা রিপোর্ট (স্মার্ট গ্রোথ)</div>
