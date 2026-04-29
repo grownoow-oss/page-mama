@@ -28,7 +28,7 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
     }
   }, [isOpen]);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setError('');
     const trimmedUrl = url.trim();
     
@@ -44,10 +44,37 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
     
     setIsSubmitting(true);
     
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/n8n-webhook', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url: trimmedUrl }),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(errorText || `HTTP Error ${response.status}`);
+      }
+
+      const htmlContent = await response.text();
+
+      // Open result in new tab
+      const newWindow = window.open('', '_blank');
+      if (newWindow) {
+        newWindow.document.write(htmlContent);
+        newWindow.document.close();
+      } else {
+        alert('অনুগ্রহ করে পপ-আপ ব্লকার (Pop-up Blocker) বন্ধ করুন।');
+      }
+      
       onClose();
-      window.dispatchEvent(new Event('start-analysis'));
-    }, 2500);
+    } catch (e: any) {
+      console.error(e);
+      alert(`দুঃখিত! কিছু সমস্যা হয়েছে। Error: ${e?.message || 'Unknown'}`);
+      setIsSubmitting(false);
+    }
   };
 
   return (
