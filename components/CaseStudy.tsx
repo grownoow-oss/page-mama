@@ -8,8 +8,8 @@ export default function CaseStudy() {
         
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-xl md:text-2xl font-bold text-[#0F172A] tracking-tight mb-3">
-            একজন ইউজারের গল্প
+          <h2 className="text-xl md:text-2xl font-black text-[#0F172A] tracking-tight mb-3">
+            একজন ইউজারের বাস্তব গল্প
           </h2>
           <p className="text-[#64748B] text-sm md:text-base font-medium flex items-center justify-center gap-2">
             রাহাত ভাই <span className="w-1 h-1 bg-gray-300 rounded-full" /> ঢাকা ফ্যাশন হাব (৬৮k followers)
@@ -24,9 +24,9 @@ export default function CaseStudy() {
               
               {/* Elegant Quote */}
               <div className="relative">
-                <Quote className="absolute -top-8 -left-6 w-16 h-16 text-[#FFB800]/10" />
+                <Quote className="absolute -top-8 -left-6 w-16 h-16 text-[#FF5E00]/10" />
                 <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#0F172A] leading-[1.15] tracking-tight relative z-10">
-                  "১৪ দিন পর রিচ <span className="text-[#FFB800]">উল্লেখযোগ্যভাবে বেড়েছে</span>। শুধুমাত্র কয়েকটা ছোট পরিবর্তনের কারণে।"
+                  "১৪ দিন পর রিচ <span className="text-[#FF5E00]">উল্লেখযোগ্যভাবে বেড়েছে</span>। শুধুমাত্র কয়েকটা ছোট পরিবর্তনের কারণে।"
                 </h3>
               </div>
 
@@ -49,7 +49,7 @@ export default function CaseStudy() {
 
                   {/* Arrow Icon (Mobile: Down, Desktop: Right) */}
                   <div className="shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center z-10 border border-gray-50 -my-6 md:my-0 md:-mx-8">
-                    <ArrowRight className="w-6 h-6 text-[#FFB800] rotate-90 md:rotate-0" />
+                    <ArrowRight className="w-6 h-6 text-[#FF5E00] rotate-90 md:rotate-0" />
                   </div>
 
                   {/* After Card */}
@@ -64,7 +64,7 @@ export default function CaseStudy() {
                     </div>
                     <div className="mt-6 flex items-center gap-2 text-xs font-bold text-emerald-600/70">
                       <TrendingUp className="w-4 h-4" />
-                      রিচ উল্লেখযোগ্যভাবে বেড়েছে (অর্গানিক)
+                      রিচ বেড়েছে (অর্গানিক)
                     </div>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ export default function CaseStudy() {
             {/* Right Column: Realistic Post Preview */}
             <div className="lg:col-span-5 relative group">
               {/* Subtle background glow */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#FFB800]/10 to-transparent blur-3xl -z-10 rounded-full scale-110 opacity-50 transition-opacity group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#FF5E00]/10 to-transparent blur-3xl -z-10 rounded-full scale-110 opacity-50 transition-opacity group-hover:opacity-100" />
               
               <div className="bg-white rounded-[2.5rem] p-3 shadow-2xl shadow-black/5 border border-gray-100 max-w-sm mx-auto transform rotate-1 transition-transform group-hover:rotate-0 duration-500">
                 <div className="bg-[#0F172A] rounded-[2rem] p-6 text-white min-h-[380px] flex flex-col">

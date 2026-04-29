@@ -59,8 +59,8 @@ export default function FAQ() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
         {/* Left Column */}
         <div className="lg:col-span-5 lg:sticky lg:top-24">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full bg-yellow-50 border border-yellow-100">
-            <span className="text-[11px] font-bold tracking-wider text-[#FFB800]">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full bg-orange-50 border border-orange-100">
+            <span className="text-[11px] font-bold tracking-wider text-[#FF5E00]">
               সাপোর্ট
             </span>
           </div>
@@ -75,7 +75,7 @@ export default function FAQ() {
           
           <button 
             onClick={() => setIsContactModalOpen(true)}
-            className="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-[#0F172A] transition-all duration-300 bg-[#FFB800] border border-transparent rounded-full shadow-sm hover:bg-[#E5BA0A] hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FFB800]"
+            className="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white transition-all duration-300 bg-[#FF5E00] border border-transparent rounded-full shadow-sm hover:bg-[#E65500] hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF5E00]"
           >
             যেকোনো কিছু জিজ্ঞেস করুন
             <ArrowRight className="w-5 h-5 ml-2" />
@@ -98,7 +98,7 @@ export default function FAQ() {
                 </span>
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300 ${openIndex === index ? 'bg-white shadow-sm' : 'bg-gray-100 group-hover:bg-gray-200'}`}>
                   <ChevronDown 
-                    className={`w-4 h-4 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-[#FFB800]' : 'rotate-0 text-[#64748B]'}`}
+                    className={`w-4 h-4 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-[#FF5E00]' : 'rotate-0 text-[#64748B]'}`}
                   />
                 </div>
               </button>
@@ -142,8 +142,8 @@ export default function FAQ() {
               </button>
               
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-yellow-100">
-                  <MessageCircle className="w-8 h-8 text-[#FFB800]" />
+                <div className="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-orange-100">
+                  <MessageCircle className="w-8 h-8 text-[#FF5E00]" />
                 </div>
                 <h3 className="text-2xl font-extrabold text-[#0F172A] mb-2">যোগাযোগ করুন</h3>
                 <p className="text-[#64748B] text-sm leading-relaxed">
@@ -169,9 +169,9 @@ export default function FAQ() {
 
                 <a 
                   href="mailto:support@pagemama.com" 
-                  className="flex items-center gap-4 p-4 rounded-2xl border border-gray-100 hover:border-[#FFB800]/30 hover:bg-yellow-50 transition-colors group"
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-gray-100 hover:border-[#FF5E00]/30 hover:bg-orange-50 transition-colors group"
                 >
-                  <div className="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center group-hover:bg-[#FFB800] group-hover:text-[#0F172A] transition-colors">
+                  <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center group-hover:bg-[#FF5E00] group-hover:text-white transition-colors">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>

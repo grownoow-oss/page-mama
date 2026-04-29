@@ -62,10 +62,10 @@ export default function Navbar() {
                 <Link 
                   key={idx} 
                   href={link.href} 
-                  className="text-sm font-bold text-[#475569] hover:text-[#FFB800] transition-colors relative group"
+                  className="text-sm font-bold text-[#475569] hover:text-[#FF5E00] transition-colors relative group"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#FFB800] transition-all duration-300 group-hover:w-full rounded-full"></span>
+                  <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#FF5E00] transition-all duration-300 group-hover:w-full rounded-full"></span>
                 </Link>
               ))}
             </div>
@@ -142,7 +142,7 @@ export default function Navbar() {
                       <Link 
                         href={link.href} 
                         onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3.5 text-[#475569] font-bold hover:text-[#FFB800] hover:bg-yellow-50/50 rounded-2xl transition-all duration-300 text-center active:scale-[0.98]"
+                        className="block px-4 py-3.5 text-[#475569] font-bold hover:text-[#FF5E00] hover:bg-orange-50/50 rounded-2xl transition-all duration-300 text-center active:scale-[0.98]"
                       >
                         {link.name}
                       </Link>
@@ -158,7 +158,7 @@ export default function Navbar() {
                   >
                     <button 
                       onClick={showLoginModal} 
-                      className="w-full flex items-center justify-center py-4 bg-[#FFB800] text-white font-black rounded-full active:scale-[0.95] transition-all shadow-lg shadow-[#FFB800]/20"
+                      className="w-full flex items-center justify-center py-4 bg-[#FF5E00] text-white font-black rounded-full active:scale-[0.95] transition-all shadow-lg shadow-[#FF5E00]/20"
                     >
                       লগইন
                     </button>
