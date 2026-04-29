@@ -237,21 +237,6 @@ export default function Hero() {
                   </div>
                   <div className="mt-6 text-center text-[9px] sm:text-[10px] text-gray-400">*(বাস্তব ইউজারদের গড় ফলাফল)</div>
                 </div>
-              </div>old ${item.status === 'urgent' ? 'text-white' : 'text-gray-400'}`}>{item.text}</span>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                      <div className="mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-white/5">
-                        <div className="bg-white text-[#0F172A] text-[11px] sm:text-[12px] font-black py-2.5 sm:py-3 px-4 rounded-xl flex items-center justify-between group cursor-pointer hover:bg-[#FF5E00] hover:text-white transition-colors">
-                          অ্যাকশন গাইড দেখুন
-                          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-6 text-center text-[9px] sm:text-[10px] text-gray-500/50">*(বাস্তব ইউজারদের গড় ফলাফল)</div>
-                </div>
               </div>
 
               {/* Floating Stat Card */}
