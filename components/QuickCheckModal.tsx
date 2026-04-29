@@ -45,7 +45,8 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/n8n-webhook', {
+      const N8N_URL = 'https://pagemama.app.n8n.cloud/webhook/analyze-page';
+      const response = await fetch(N8N_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,10 +55,10 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
       });
 
       if (!response.ok) {
-        throw new Error(`Server error: ${response.status}`);
+        throw new Error(`Server error`);
       }
 
-      const htmlContent = await response.text();
+      const htmlContent = await response.text(); // Get as HTML (not JSON)
 
       // Open result in new tab
       const newWindow = window.open('', '_blank');
