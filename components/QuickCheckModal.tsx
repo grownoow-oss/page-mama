@@ -54,8 +54,7 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
       });
 
       if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(errorText || `HTTP Error ${response.status}`);
+        throw new Error(`Server error: ${response.status}`);
       }
 
       const htmlContent = await response.text();
@@ -71,8 +70,8 @@ export default function QuickCheckModal({ isOpen, onClose }: QuickCheckModalProp
       
       onClose();
     } catch (e: any) {
-      console.error(e);
-      alert(`দুঃখিত! কিছু সমস্যা হয়েছে। Error: ${e?.message || 'Unknown'}`);
+      console.error('Error:', e);
+      alert('দুঃখিত! কিছু সমস্যা হয়েছে। আবার চেষ্টা করুন।');
       setIsSubmitting(false);
     }
   };
